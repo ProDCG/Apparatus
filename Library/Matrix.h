@@ -55,3 +55,29 @@ Matrix<m, n> operator / (Matrix<m, n> lhs, double rhs) noexcept {
 
     return matrix;
 }
+
+template <size_t m, size_t n>
+Matrix<m, n> operator - (Matrix<m, n> lhs, Matrix<m, n> rhs) noexcept {
+    Matrix<m, n> matrix(std::move(lhs));
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            matrix[i][j] = lhs[i][j] - rhs[i][j];
+        };
+    };
+
+    return matrix;
+}
+
+template <size_t m, size_t n>
+Matrix<m, n> operator + (Matrix<m, n> lhs, Matrix<m, n> rhs) noexcept {
+    Matrix<m, n> matrix(std::move(lhs));
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            matrix[i][j] = lhs[i][j] + rhs[i][j];
+        };
+    };
+
+    return matrix;
+}
