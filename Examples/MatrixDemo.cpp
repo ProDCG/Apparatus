@@ -14,6 +14,13 @@ int main() {
         {16, 17, 18}
     };
 
+    Matrix<4, 2> testM {
+        {1, 2},
+        {3, 4},
+        {5, 6},
+        {7, 8}
+    };
+
     m1.print();
     std::cout << '\n';
     m2.print();
@@ -25,7 +32,11 @@ int main() {
     Matrix<3, 3> m4 = m1 + m2;
     m4.print();
 
+    testM.print();
+
     // auto newM = m1 * 2.0;
+
+    
 
     // newM.print();
 
