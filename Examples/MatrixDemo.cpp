@@ -33,6 +33,8 @@ int main() {
     m4.print();
 
     testM.print();
+    std::cout << '\n';
+    (testM + 3).print();
 
     // auto newM = m1 * 2.0;
 

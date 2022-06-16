@@ -30,6 +30,10 @@ public:
             std::cout << '\n';
         });
     }
+
+    void rotate(double radians) noexcept {
+        
+    }
 };
 
 template <size_t m, size_t n> 
@@ -52,6 +56,32 @@ Matrix<m, n> operator / (Matrix<m, n> lhs, double rhs) noexcept {
     std::for_each(matrix.begin(), matrix.end(), [rhs](auto& element) noexcept {
         std::for_each(element.begin(), element.end(), [rhs](auto& value) noexcept {
             value /= rhs;
+        });
+    });
+
+    return matrix;
+}
+
+template<size_t m, size_t n>
+Matrix<m, n> operator + (Matrix<m, n> lhs, double rhs) noexcept {
+    Matrix<m, n> matrix(std::move(lhs));
+
+    std::for_each(matrix.begin(), matrix.end(), [rhs](auto& element) noexcept {
+        std::for_each(element.begin(), element.end(), [rhs](auto& value) noexcept {
+            value += rhs;
+        });
+    });
+
+    return matrix;
+}
+
+template<size_t m, size_t n>
+Matrix<m, n> operator - (Matrix<m, n> lhs, double rhs) noexcept {
+    Matrix<m, n> matrix(std::move(lhs));
+
+    std::for_each(matrix.begin(), matrix.end(), [rhs](auto& element) noexcept {
+        std::for_each(element.begin(), element.end(), [rhs](auto& value) noexcept {
+            value -= rhs;
         });
     });
 
