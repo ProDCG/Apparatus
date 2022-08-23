@@ -1,1 +1,1 @@
-Blank README.md file, will fill in eventually with Aparatus information and what not.
+Apparatus is a performance focused and efficient math library with a C++ backend. The library specializes in linear algebra, number theory, and basic arithmetic. A coming feature will allow to use the JNI, so that the library can give you the C++ performance speeds in other less efficient languages.
