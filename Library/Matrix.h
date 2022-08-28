@@ -32,15 +32,10 @@ public:
     }
 
     void transpose() noexcept {
-        Matrix<m, n> matrix(std::move(Matrix::data));
-        std::for_each(Matrix::begin(), Matrix::end(), [](auto& element) noexcept {
-            std::for_each(element.begin(), element.end(), [](auto& value) noexcept {
-                std::cout << value << " ";
-            });
-
-            std::cout << '\n';
-        });
+        // not implemented yet
     }
+
+    void 
 };
 
 template <size_t m, size_t n> 
