@@ -19,4 +19,9 @@ class Matrix {
     protected native void multiply(double num);
 
     protected native void divide (double num);
+
+
+    public void print() {
+        System.out.println("Hello World!");
+    }
 }
