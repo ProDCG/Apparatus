@@ -10,7 +10,7 @@ template<typename T, size_t s>
 std::array<T, s> insertionSort(std::array<T, s> arr);
 
 // POLICY PATTERN
-// in implementation of sort() do the desired policy
+// in implementation of sort() do the desired policy 
 
 template<typename policy, typename T> T sort(T arr);
 
