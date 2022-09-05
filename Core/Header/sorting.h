@@ -13,7 +13,12 @@ std::array<T, s> insertionSort(std::array<T, s> arr);
 // in implementation of sort() do the desired policy
 
 template<typename policy, typename T> T sort(T arr);
+
 struct insertion_sort_policy_t {
     // something about defining insertion sort
 };
+
+struct merge_sort_policy_t {};
+
+struct bubble_sort_policy_t {};
 #endif
