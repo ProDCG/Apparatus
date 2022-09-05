@@ -3,9 +3,7 @@
 
 #include <array>
 
-template<size_t s>
-std::array<int, s> insertionSort(std::array<int, s> arr);
+template<typename T, size_t s>
+std::array<T, s> sort(std::array<T, s> arr);
 
-template<size_t s>
-std::array<int, s> mergeSort(std::array<int, s> arr);
 #endif
