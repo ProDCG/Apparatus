@@ -12,7 +12,7 @@ std::array<T, s> insertionSort(std::array<T, s> arr);
 // POLICY PATTERN
 // in implementation of sort() do the desired policy 
 
-template<typename policy, typename T> T sort(T arr);
+template<typename policy, typename T, size_t s> std::array<T, s> sort(std::array<T, s> arr);
 
 struct insertion_sort_policy_t {
     // something about defining insertion sort
