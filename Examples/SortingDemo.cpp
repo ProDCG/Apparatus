@@ -1,4 +1,5 @@
-#include "Core/Header/sorting.h"
+#include <array>
+#include "sorting.h"
 
 int values[] = {1, 2, 3};
 std::array<int, 5> values2 = {1, 2, 3, 4, 5};
