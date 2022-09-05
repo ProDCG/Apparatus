@@ -16,6 +16,7 @@ template<typename policy, typename T> T sort(T arr);
 
 struct insertion_sort_policy_t {
     // something about defining insertion sort
+    
 };
 
 struct merge_sort_policy_t {};
