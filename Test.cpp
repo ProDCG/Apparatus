@@ -6,10 +6,11 @@
 template <typename Policy, typename T> 
 void sort(T arr);
 
-struct quick_sort_policy_t {
+struct some_sort_policy {
     template<typename T>
     void operator()(T& arr) {
         std::cout << typeid(arr).name() << '\n';
+        // do something with the array
     }
 };
 
@@ -17,6 +18,6 @@ std::array<int, 3> arr = {1, 2, 3};
 int arr2[] = {1, 2, 3};
 
 int main() {
-    sort<quick_sort_policy_t>(&arr2);
+    sort<some_sort_policy>(&arr2);
     std::cout << arr.at(1);
 }
