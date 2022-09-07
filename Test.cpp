@@ -6,7 +6,7 @@
 #include <iostream>
 #include <array>
 
-std::array<int, 3> arr = {1, 2, 3};
+std::array<int, 6> arr = {27, 19, 54, 294, -52, 25};
 
 int main() {
     sort<insertion_sort_policy_t>(arr);
