@@ -9,6 +9,6 @@
 std::array<int, 3> arr = {1, 2, 3};
 
 int main() {
-    sort<merge_sort_policy_t>(arr);
+    sort<insertion_sort_policy_t>(arr);
     std::cout << arr[1];
 }
