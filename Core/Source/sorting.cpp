@@ -4,7 +4,7 @@ struct insertion_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
         int i, key, j;
-        for (int i = 1; i < (sizeof(arr) / sizeof(arr[0])); i++) {
+        for (int i = 1; i < arr.size(); i++) {
             key = arr[i];
             j = i - 1;
 
