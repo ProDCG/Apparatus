@@ -27,3 +27,24 @@ struct selection_sort_policy_t {
         // sort
     }
 };
+
+struct counting_sort_policy_t {
+    template <typename T>
+    void operator()(T& arr) {
+        // sort
+    }
+};
+
+struct heap_sort_policy_t {
+    template <typename T>
+    void operator()(T& arr) {
+        // sort
+    }
+};
+
+struct radix_sort_policy_t {
+    template <typename T>
+    void operator()(T& arr) {
+        // sort
+    }
+};
