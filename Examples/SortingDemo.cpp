@@ -22,7 +22,9 @@ int main() {
     // auto duration1 = std::chrono::duration_cast<std::chrono::milliseconds>(stop1 - start1);
     // std::cout << duration1.count() << std::endl;
 
+    std::cout << values[0] << std::endl;
     sort<quick_sort_policy_t>(values);
+    std::cout << values[0] << std::endl;
 }
 
 template <typename T>
