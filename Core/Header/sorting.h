@@ -31,8 +31,8 @@ struct quick_sort_policy_t {
         quicksort(arr, 0, arr.size() - 1);
     }
 
-    template<typename T, typename sST, typename sEN>
-    void quicksort(T& arr, sST start, sEN end) {
+    template<typename T, typename T2>
+    void quicksort(T& arr, T2 start, T2 end) {
         if (start < end) {
             int pi = partition(arr, start, end);
 
