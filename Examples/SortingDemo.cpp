@@ -23,7 +23,7 @@ int main() {
     
     std::cout << values[0] << std::endl;
     auto start = std::chrono::high_resolution_clock::now();
-    sort<quick_sort_policy_t>(values);
+    sort<selection_sort_policy_t>(values);
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
     std::cout << values[0] << std::endl;

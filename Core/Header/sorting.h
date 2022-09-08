@@ -73,7 +73,7 @@ struct selection_sort_policy_t {
         int min_idx = 0;
         for (int i = 0; i < arr.size() - 1; i++) {
             min_idx = i;
-            for (int j = i + 1; j < n; j++) {
+            for (int j = i + 1; j < arr.size(); j++) {
                 if (arr[j] < arr[min_idx]) {
                     min_idx = j;
                 }
