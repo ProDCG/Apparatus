@@ -41,8 +41,8 @@ struct quick_sort_policy_t {
         }
     }
 
-    template<typename T, typename sST, typename sEN>
-    int partition(T& arr, sST start, sEN end) {
+    template<typename T, typename T2>
+    int partition(T& arr, T2 start, T2 end) {
         int pivot = arr[end];
 
         int i = (start - 1);
