@@ -55,6 +55,23 @@ struct quick_sort_policy_t {
 
         int pivotIndex = start + count;
         std::swap(arr[pivotIndex], arr[start]);
+
+        int i = start, j = end;
+        while (i < pivotIndex && j > pivotIndex) {
+            while (arr[i] <= pivot) {
+                i++;
+            }
+
+            while (arr[j] > pivot) {
+                j--;
+            }
+
+            if (i < pivotIndex && j > pivotIndex) {
+                std::swap(arr[i++], arr[j--]);
+            }
+        }
+
+        return pivotIndex;
     }
 };
 
