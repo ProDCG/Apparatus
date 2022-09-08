@@ -67,6 +67,13 @@ struct quick_sort_policy_t {
     // }
 };
 
+struct selection_sort_policy_t {
+    template <typename T>
+    void operator()(T& arr) {
+        // sort
+    }
+};
+
 struct merge_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
@@ -75,13 +82,6 @@ struct merge_sort_policy_t {
 };
 
 struct bubble_sort_policy_t {
-    template <typename T>
-    void operator()(T& arr) {
-        // sort
-    }
-};
-
-struct selection_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
         // sort
