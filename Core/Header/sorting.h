@@ -29,13 +29,15 @@ struct quick_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
         //quicksort(arr, 0, arr.size());
-        std::cout << "here" << std::endl;
-        quicksort(arr);
+        std::cout << "here" << arr.size() << " " << arr.size() - 1 << std::endl;
+        quicksort(arr, arr.size() - 1);
     }
 
-    template<typename T>
-    void quicksort(T& arr) {
-        std::cout << "here part 2" << std::endl;
+    template<typename T, typename sST, typename sEN>
+    void quicksort(T& arr, sST start, sEN end) {
+        if (start < end) {
+
+        }
     }
 
     // template <typename T>
