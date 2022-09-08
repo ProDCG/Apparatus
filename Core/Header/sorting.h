@@ -28,7 +28,6 @@ struct insertion_sort_policy_t {
 struct quick_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
-        //quicksort(arr, 0, arr.size());
         quicksort(arr, 0, arr.size() - 1);
     }
 
@@ -38,7 +37,6 @@ struct quick_sort_policy_t {
             int pi = partition(arr, start, end);
 
             quicksort(arr, start, pi - 1);
-
             quicksort(arr, pi + 1, end);
         }
     }
