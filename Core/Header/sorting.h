@@ -66,49 +66,6 @@ struct quick_sort_policy_t {
         *a = *b;
         *b = t;
     }
-
-    // template <typename T>
-    // void quicksort(T& arr, int start, int end) {
-    //     if (start >= end) {
-    //         return;
-    //     }
-
-    //     int p = partition(arr, start, end);
-    //     quicksort(arr, start, p - 1);
-    //     quicksort(arr, p + 1, end);
-    // }
-
-    // template<typename T>
-    // int partition(T& arr, int start, int end) {
-    //     int pivot = arr[start];
-
-    //     int count = 0;
-    //     for (int i = start = 1; i <= end; i++) {
-    //         if (arr[i] <= pivot) {
-    //             count++;
-    //         }
-    //     }
-
-    //     int pivotIndex = start + count;
-    //     std::swap(arr[pivotIndex], arr[start]);
-
-    //     int i = start, j = end;
-    //     while (i < pivotIndex && j > pivotIndex) {
-    //         while (arr[i] <= pivot) {
-    //             i++;
-    //         }
-
-    //         while (arr[j] > pivot) {
-    //             j--;
-    //         }
-
-    //         if (i < pivotIndex && j > pivotIndex) {
-    //             std::swap(arr[i++], arr[j--]);
-    //         }
-    //     }
-
-    //     return pivotIndex;
-    // }
 };
 
 struct merge_sort_policy_t {
