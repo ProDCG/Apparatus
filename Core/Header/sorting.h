@@ -29,7 +29,6 @@ struct quick_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
         //quicksort(arr, 0, arr.size());
-        std::cout << "here" << arr.size() << " " << arr.size() - 1 << std::endl;
         quicksort(arr, 0, arr.size() - 1);
     }
 
@@ -50,7 +49,7 @@ struct quick_sort_policy_t {
 
         int i = (start - 1);
 
-        for (int j = low; j < high; j++) {
+        for (int j = start; j < end; j++) {
             if (arr[j] <= pivot) {
                 i++;
                 swap(&arr[i], &arr[j]);
