@@ -28,7 +28,7 @@ struct insertion_sort_policy_t {
 struct quick_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
-        // to be implemented
+        quicksort(arr, 0, arr.size());
     }
 
     template <typename T>
