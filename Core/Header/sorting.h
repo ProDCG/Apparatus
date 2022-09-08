@@ -30,14 +30,42 @@ struct quick_sort_policy_t {
     void operator()(T& arr) {
         //quicksort(arr, 0, arr.size());
         std::cout << "here" << arr.size() << " " << arr.size() - 1 << std::endl;
-        quicksort(arr, arr.size() - 1);
+        quicksort(arr, 0, arr.size() - 1);
     }
 
     template<typename T, typename sST, typename sEN>
     void quicksort(T& arr, sST start, sEN end) {
         if (start < end) {
+            int pi = partition(arr, start, end);
 
+            quicksort(arr, start, pi - 1);
+
+            quicksort(arr, pi + 1, end);
         }
+    }
+
+    template<typename T, typename sST, typename sEN>
+    int partition(T& arr, sST start, sEN end) {
+        int pivot = arr[end];
+
+        int i = (start - 1);
+
+        for (int j = low; j < high; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+                swap(&arr[i], &arr[j]);
+            }
+        }
+
+        swap(&arr[i + 1], &arr[end]);
+
+        return (i + 1);
+    }
+
+    void swap(int *a, int *b) {
+        int t = *a;
+        *a = *b;
+        *b = t;
     }
 
     // template <typename T>
