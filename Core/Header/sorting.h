@@ -50,20 +50,21 @@ struct quick_sort_policy_t {
         for (int j = start; j < end; j++) {
             if (arr[j] <= pivot) {
                 i++;
-                swap(&arr[i], &arr[j]);
+                std::swap(&arr[i], &arr[j]);
             }
         }
 
-        swap(&arr[i + 1], &arr[end]);
+        std::swap(&arr[i + 1], &arr[end]);
+        // swap(&arr[i + 1], &arr[end]);
 
         return (i + 1);
     }
 
-    void swap(int *a, int *b) {
-        int t = *a;
-        *a = *b;
-        *b = t;
-    }
+    // void swap(int *a, int *b) {
+    //     int t = *a;
+    //     *a = *b;
+    //     *b = t;
+    // }
 };
 
 struct merge_sort_policy_t {
