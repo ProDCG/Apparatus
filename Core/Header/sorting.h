@@ -109,7 +109,7 @@ struct merge_sort_policy_t {
     }
 };
 
-struct bubble_sort_policy_t {
+struct bogo_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
         while (!isSorted(arr)) {
@@ -143,7 +143,7 @@ struct bubble_sort_policy_t {
     }
 };
 
-struct bogo_sort_policy_t {
+struct bubble_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
         // sort
