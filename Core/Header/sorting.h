@@ -46,7 +46,7 @@ struct quick_sort_policy_t {
             quicksort(arr, pi + 1, end);
         }
     }
-
+    
     template<typename T, typename T2>
     int partition(T& arr, T2 start, T2 end) {
         int pivot = arr[end];
@@ -67,8 +67,9 @@ struct quick_sort_policy_t {
         return (i + 1);
     }
 
-    void swap(int *a, int *b) {
-        int t = *a;
+    template<typename T>
+    void swap(T *a, T *b) {
+        T t = *a;
         *a = *b;
         *b = t;
     }
