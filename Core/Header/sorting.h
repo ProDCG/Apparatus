@@ -87,9 +87,17 @@ struct selection_sort_policy_t {
             }
 
             if (min_idx != i) {
-                std::swap(&arr[min_idx], &arr[i]);
+                // std::swap(&arr[min_idx], &arr[i]);
+                swap(&arr[min_idx], &arr[i]);
             }
         }
+    }
+
+    template<typename T>
+    void swap(T *a, T *b) {
+        T t = *a;
+        *a = *b;
+        *b = t;
     }
 };
 
