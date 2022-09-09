@@ -2,7 +2,9 @@
 #define NUMERICAL_H
 
 namespace numerical {
-    
+    bool isWilsonPrime() {
+        
+    }
 }
 
 /*
