@@ -112,10 +112,15 @@ struct merge_sort_policy_t {
 struct bubble_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
-        // sort
+        while (!isSorted(arr)) {
+            shuffle()
+        }
     }
 
-    
+    template <typename T>
+    void shuffle(T& arr) {
+
+    }
 
     template <typename T>
     bool isSorted(T& arr) {
