@@ -113,13 +113,15 @@ struct bubble_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
         while (!isSorted(arr)) {
-            shuffle()
+            shuffle(arr);
         }
     }
 
     template <typename T>
     void shuffle(T& arr) {
-
+        for (int i = 0; i < arr.size(); i++) {
+            swap(arr[i], arr[std::rand() % arr.size()]);
+        }
     }
 
     template <typename T>
