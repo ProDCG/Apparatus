@@ -114,6 +114,26 @@ struct bubble_sort_policy_t {
     void operator()(T& arr) {
         // sort
     }
+
+    
+
+    template <typename T>
+    bool isSorted(T& arr) {
+        int n = arr.size();
+        while (--n > 0) {
+            if (arr[n] < arr[n - 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    template <typename T>
+    void swap(T *a, T *b) {
+        T t = *a;
+        *a = *b;
+        *b = t;
+    }
 };
 
 struct bogo_sort_policy_t {
