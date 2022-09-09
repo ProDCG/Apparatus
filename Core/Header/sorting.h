@@ -46,14 +46,14 @@ struct quick_sort_policy_t {
             quicksort(arr, pi + 1, end);
         }
     }
-    
+
     template<typename T, typename T2>
     int partition(T& arr, T2 start, T2 end) {
         int pivot = arr[end];
 
-        int i = (start - 1);
+        int i = (start - 1), j = 0;
 
-        for (int j = start; j < end; j++) {
+        for (j = start; j < end; j++) {
             if (arr[j] <= pivot) {
                 i++;
                 //std::swap(&arr[i], &arr[j]);
