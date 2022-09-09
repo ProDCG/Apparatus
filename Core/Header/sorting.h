@@ -116,6 +116,13 @@ struct bubble_sort_policy_t {
     }
 };
 
+struct bogo_sort_policy_t {
+    template <typename T>
+    void operator()(T& arr) {
+        // sort
+    }
+};
+
 struct counting_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
