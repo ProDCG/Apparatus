@@ -1,6 +1,12 @@
 #ifndef SORTING_H
 #define SORTING_H
 
+/*
+insertion sort
+quick sort
+selection sort
+*/
+
 template <typename Policy, typename T> 
 void sort(T& arr) {
     Policy p;
@@ -31,8 +37,8 @@ struct quick_sort_policy_t {
         quicksort(arr, 0, arr.size() - 1);
     }
 
-    template<typename T, typename T2>
-    void quicksort(T& arr, T2 start, T2 end) {
+    template<typename T>
+    void quicksort(T& arr, int start, int end) {
         if (start < end) {
             int pi = partition(arr, start, end);
 
@@ -50,21 +56,22 @@ struct quick_sort_policy_t {
         for (int j = start; j < end; j++) {
             if (arr[j] <= pivot) {
                 i++;
-                std::swap(&arr[i], &arr[j]);
+                //std::swap(&arr[i], &arr[j]);
+                swap(&arr[i], &arr[j]);
             }
         }
 
-        std::swap(&arr[i + 1], &arr[end]);
-        // swap(&arr[i + 1], &arr[end]);
+        // std::swap(&arr[i + 1], &arr[end]);
+        swap(&arr[i + 1], &arr[end]);
 
         return (i + 1);
     }
 
-    // void swap(int *a, int *b) {
-    //     int t = *a;
-    //     *a = *b;
-    //     *b = t;
-    // }
+    void swap(int *a, int *b) {
+        int t = *a;
+        *a = *b;
+        *b = t;
+    }
 };
 
 struct selection_sort_policy_t {
