@@ -25,8 +25,9 @@ namespace numerical {
         return (std:floor(num) == num);
     }
 
-    bool isComposite() {
-
+    template <typename T>
+    bool isComposite(T num) {
+        // call !isPrime(), since composite is not a prime number.
     }
 }
 
