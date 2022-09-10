@@ -5,6 +5,26 @@ namespace numerical {
     bool isWilsonPrime() {
         
     }
+
+    bool isPrimeNumber() {
+
+    }
+
+    bool isEven() {
+
+    }
+
+    bool isOdd() {
+
+    }
+
+    bool isWhole() {
+
+    }
+
+    bool isComposite() {
+        
+    }
 }
 
 /*
