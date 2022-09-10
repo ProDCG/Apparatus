@@ -1,6 +1,8 @@
 #ifndef NUMERICAL_H
 #define NUMERICAL_H
 
+#include <math.h>
+
 namespace numerical {
     bool isWilsonPrime() {
         
@@ -19,11 +21,11 @@ namespace numerical {
     }
 
     bool isWhole() {
-
+        return (st)
     }
 
     bool isComposite() {
-        
+
     }
 }
 
