@@ -19,12 +19,11 @@ int main() {
     // insertion_sort(values2);
     // auto stop1 = std::chrono::high_resolution_clock::now();
     // auto duration1 = std::chrono::duration_cast<std::chrono::milliseconds>(stop1 - start1);
-    // std::cout << duration1.count() << std::endl;
-
+    // std::cout << duration1.count() << std::endl
     
     std::cout << values[0] << std::endl;
     auto start = std::chrono::high_resolution_clock::now();
-    sort<quick_sort_policy_t>(values);
+    sort<insertion_sort_policy_t>(values);
     auto stop = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
     std::cout << values[0] << std::endl;
