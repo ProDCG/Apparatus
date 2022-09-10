@@ -12,7 +12,8 @@ namespace numerical {
 
     }
 
-    bool isEven() {
+    template <typename T>
+    bool isEven(T num) {
         return num % 2 == 0;
     }
 
