@@ -129,9 +129,8 @@ struct bogo_sort_policy_t {
         return true;
     }
 
-    template <typename T>
-    void swap(T *a, T *b) {
-        T t = *a;
+    void swap(int *a, int *b) {
+        int t = *a;
         *a = *b;
         *b = t;
     }
