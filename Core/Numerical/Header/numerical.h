@@ -20,8 +20,9 @@ namespace numerical {
 
     }
 
-    bool isWhole() {
-        return (st)
+    template <typename T>
+    bool isWhole(T num) {
+        return (std:floor(num) == num);
     }
 
     bool isComposite() {
