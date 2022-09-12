@@ -6,8 +6,6 @@
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/Library",
                 "${workspaceFolder}/Core",
-                "${workspaceFolder}/Core/Header",
-                "${workspaceFolder}/Core/Source",
                 "${workspaceFolder}/Examples"
             ],
             "defines": [
