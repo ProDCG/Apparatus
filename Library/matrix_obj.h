@@ -5,8 +5,6 @@
 #include <iostream>
 #include <algorithm>
 
-#include "Vector.h"
-
 template <size_t m, size_t n>
 class Matrix : public std::array<std::array<double, n>, m> {
 public:

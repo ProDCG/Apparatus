@@ -1,6 +1,8 @@
 #pragma once
 
-namespace apparatus {
+#include <../Library/matrix_obj.h>
 
-    typedef 
+namespace Apparatus {
+
+    typedef Matrix<3, 3> mat3;
 }
