@@ -13,6 +13,14 @@ namespace profiling {
         velocity = std::min(velocity, maxVelocity);
         return velocity;
     }
+
+    double trapezoidal(double time, double maxAcceleration, double maxVelocity) {
+
+    }
+
+    double s_curve(double time, double maxAcceleration, double maxVelocity) {
+        
+    }
 }
 
 #endif
