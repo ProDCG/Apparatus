@@ -4,7 +4,7 @@
 #include <algorithm>
 
 namespace profiling {
-    double update(double time, double maxAcceleration, double maxVelocity) {
+    double rising_plateu(double time, double maxAcceleration, double maxVelocity) {
         if (time < 0) {
             return 0;
         }
