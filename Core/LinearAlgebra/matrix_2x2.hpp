@@ -2,7 +2,7 @@
 
 #include <../Library/matrix_obj.h>
 
-namespace Apparatus {
+namespace apparatus {
 
     typedef Matrix<3, 4> mat3x4;
     typedef Matrix<3, 3> mat3x3;
