@@ -19,6 +19,16 @@ public:
         }
     }
 
+    Matrix(double i) {
+        for (int i = 0; i < Matrix::size(); i++) {
+            for (int j = 0; j < Matrix::at(0)::size_t; j++) {
+                if (i == j) {
+                    
+                }
+            } 
+        }
+    }
+
     void print() const {
         std::for_each(Matrix::begin(), Matrix::end(), [](auto& element) noexcept {
             std::for_each(element.begin(), element.end(), [](auto& value) noexcept {

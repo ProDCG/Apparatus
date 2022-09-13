@@ -1,6 +1,5 @@
 #include <iostream>
-#include "matrix_obj.h"
-#include "../Core/LinearAlgebra/matrix_2x2.hpp"
+#include "../Core/LinearAlgebra/matrices.hpp"
 
 int main() {
     Matrix<3, 3, double> m1{
@@ -12,5 +11,6 @@ int main() {
     m1.transpose();
     m1.print();
 
-    apparatus::mat4 mat_test = apparatus::mat4({{1, 2, 3}, {4, 5, 6}, {7, 8, 9}});
+    apparatus::mat3x3 cam = apparatus::mat3x3(1.0f);
+    
 }
