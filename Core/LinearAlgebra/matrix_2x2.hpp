@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../Library/matrix_obj.h>
+#include <../Core/LinearAlgebra/matrix_generic.hpp>
 
 namespace apparatus {
 
