@@ -1,6 +1,6 @@
 #include <iostream>
 #include <array>
-#include "../Core/LinearAlgebra/matrices.hpp"
+#include "../Core/LinearAlgebra/Matrix/matrices.hpp"
 
 int main() {
     Matrix<3, 3, double> m1{
