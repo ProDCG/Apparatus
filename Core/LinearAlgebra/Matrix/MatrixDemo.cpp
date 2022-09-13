@@ -14,9 +14,13 @@ int main() {
 
     apparatus::mat3x3 cam = apparatus::mat3x3(1.0f);
 
+    // apparatus matrix
     apparatus::mat4 cam2 = apparatus::mat4(1.0f);
     apparatus::b_mat4 cam3 = apparatus::b_mat4(true);
     apparatus::i_mat2 cam4 = apparatus::i_mat2(false);
+
+    // initializing with list
+    apparatus::mat3 cam5{{1, 2, 3}, {4, 5, 6}, {7,  8, 9}};
     
     std::array<std::array<int, 3>, 2> arr = {{{1, 2, 3}, {4, 5, 6}}};
 }
