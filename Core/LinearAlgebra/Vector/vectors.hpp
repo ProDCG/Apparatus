@@ -1,0 +1,1 @@
+#include <../Core/LinearAlgebra/Vector/vector_2.hpp>

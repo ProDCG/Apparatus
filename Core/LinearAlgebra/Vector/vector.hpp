@@ -2,7 +2,7 @@
 
 #include <array>
 
-template <size_t m>
+template <size_t C, typename T>
 class Vector : public std::array<double, m> {
 public:
 
@@ -22,7 +22,7 @@ public:
     }
 };
 
-template<size_t m>
+template<size_t C, typename T>
 Vector<m> operator * (Vector<m> lhs, double rhs) noexcept {
     Vector<m> vector(std::move(lhs));
 
@@ -33,7 +33,7 @@ Vector<m> operator * (Vector<m> lhs, double rhs) noexcept {
     return vector;
 }
 
-template<size_t m>
+template<size_t C, typename T>
 Vector<m> operator / (Vector<m> lhs, double rhs) noexcept {
     Vector<m> vector(std::move(lhs));
 
@@ -44,7 +44,7 @@ Vector<m> operator / (Vector<m> lhs, double rhs) noexcept {
     return vector;
 }
 
-template<size_t m>
+template<size_t C, typename T>
 Vector<m> operator + (Vector<m> lhs, Vector<m> rhs) noexcept {
     Vector<m> vector(std::move(lhs));
 
@@ -55,7 +55,7 @@ Vector<m> operator + (Vector<m> lhs, Vector<m> rhs) noexcept {
     return vector;
 }
 
-template<size_t m>
+template<size_t C, typename T>
 Vector<m> operator - (Vector<m> lhs, Vector<m> rhs) noexcept {
     Vector<m> vector(std::move(lhs));
 

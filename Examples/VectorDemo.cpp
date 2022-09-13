@@ -1,19 +1,7 @@
 #include <iostream>
 
-#include "Library/matrix_obj.h"
-#include "Vector.h"
+#include "../Core/LinearAlgebra/Matrix/vectors.hpp"
 
 int main() {
-    Vector<3> v1{1, 2, 3};
-    Vector<3> v2{4, 5, 6};
-
-    v1.print();
-
-    (v1 * 2).print();
-
-    (v1 / 2).print();
-
-    (v1 + v2).print();
-
-    (v1 - v2).print();
+    apparatus::
 }
