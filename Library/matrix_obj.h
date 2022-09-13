@@ -19,6 +19,15 @@ public:
         }
     }
 
+    Matrix(double val) {
+        auto element_it = Matrix::begin();
+
+        for (auto& row : list) {
+            std::copy(row.begin(), row.end(), element_it->begin());
+            
+        }
+    }
+
     void print() const {
         std::for_each(Matrix::begin(), Matrix::end(), [](auto& element) noexcept {
             std::for_each(element.begin(), element.end(), [](auto& value) noexcept {
