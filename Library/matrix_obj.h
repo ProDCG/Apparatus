@@ -5,24 +5,18 @@
 #include <iostream>
 #include <algorithm>
 
-template <size_t m, size_t n>
-class Matrix : public std::array<std::array<double, n>, m> {
+template <size_t M, size_t N, typename T>
+class Matrix : public std::array<std::array<T, N>, M>{
 public:
     Matrix();
 
-    Matrix(std::initializer_list<std::initializer_list<double>> list) noexcept {
+    Matrix(std::initializer_list<std::initializer_list<auto>> list) noexcept {
         auto element_it = Matrix::begin();
 
         for (auto& row : list) {
             std::copy(row.begin(), row.end(), element_it->begin());
             ++element_it;
         }
-    }
-
-    Matrix(double val) {
-        auto element_it = Matrix::begin();
-
-        
     }
 
     void print() const {
@@ -38,13 +32,11 @@ public:
     void transpose() noexcept {
         // not implemented yet
     }
-
-    void 
 };
 
-template <size_t m, size_t n> 
-Matrix<m, n> operator * (Matrix<m, n> lhs, double rhs) noexcept {
-    Matrix<m, n> matrix(std::move(lhs));
+template <size_t M, size_t N, typename T> 
+Matrix<M, N, T> operator * (Matrix<M, N, T> lhs, double rhs) noexcept {
+    Matrix<M, N, T> matrix(std::move(lhs));
 
     std::for_each(matrix.begin(), matrix.end(), [rhs](auto& element) noexcept {
         std::for_each(element.begin(), element.end(), [rhs](auto& value) noexcept {
@@ -55,9 +47,9 @@ Matrix<m, n> operator * (Matrix<m, n> lhs, double rhs) noexcept {
     return matrix;
 }
 
-template <size_t m, size_t n>
-Matrix<m, n> operator / (Matrix<m, n> lhs, double rhs) noexcept {
-    Matrix<m, n> matrix(std::move(lhs));
+template <size_t M, size_t N, typename T>
+Matrix<M, N, T> operator / (Matrix<M, N, T> lhs, double rhs) noexcept {
+    Matrix<M, N, T> matrix(std::move(lhs));
 
     std::for_each(matrix.begin(), matrix.end(), [rhs](auto& element) noexcept {
         std::for_each(element.begin(), element.end(), [rhs](auto& value) noexcept {
@@ -68,9 +60,9 @@ Matrix<m, n> operator / (Matrix<m, n> lhs, double rhs) noexcept {
     return matrix;
 }
 
-template<size_t m, size_t n>
-Matrix<m, n> operator + (Matrix<m, n> lhs, double rhs) noexcept {
-    Matrix<m, n> matrix(std::move(lhs));
+template<size_t M, size_t N, typename T>
+Matrix<M, N, T> operator + (Matrix<M, N, T> lhs, double rhs) noexcept {
+    Matrix<M, N, T> matrix(std::move(lhs));
 
     std::for_each(matrix.begin(), matrix.end(), [rhs](auto& element) noexcept {
         std::for_each(element.begin(), element.end(), [rhs](auto& value) noexcept {
@@ -81,9 +73,9 @@ Matrix<m, n> operator + (Matrix<m, n> lhs, double rhs) noexcept {
     return matrix;
 }
 
-template<size_t m, size_t n>
-Matrix<m, n> operator - (Matrix<m, n> lhs, double rhs) noexcept {
-    Matrix<m, n> matrix(std::move(lhs));
+template<size_t M, size_t N, typename T>
+Matrix<M, N, T> operator - (Matrix<M, N, T> lhs, double rhs) noexcept {
+    Matrix<M, N, T> matrix(std::move(lhs));
 
     std::for_each(matrix.begin(), matrix.end(), [rhs](auto& element) noexcept {
         std::for_each(element.begin(), element.end(), [rhs](auto& value) noexcept {
@@ -94,9 +86,9 @@ Matrix<m, n> operator - (Matrix<m, n> lhs, double rhs) noexcept {
     return matrix;
 }
 
-template <size_t m, size_t n>
-Matrix<m, n> operator + (Matrix<m, n> lhs, Matrix<m, n> rhs) noexcept {
-    Matrix<m, n> matrix(std::move(lhs));
+template <size_t M, size_t N, typename T>
+Matrix<M, N, T> operator + (Matrix<M, N, T> lhs, Matrix<M, N, T> rhs) noexcept {
+    Matrix<M, N, T> matrix(std::move(lhs));
 
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
@@ -107,9 +99,9 @@ Matrix<m, n> operator + (Matrix<m, n> lhs, Matrix<m, n> rhs) noexcept {
     return matrix;
 }
 
-template <size_t m, size_t n>
-Matrix<m, n> operator - (Matrix<m, n> lhs, Matrix<m, n> rhs) noexcept {
-    Matrix<m, n> matrix(std::move(lhs));
+template <size_t M, size_t N, typename T>
+Matrix<M, N, T> operator - (Matrix<M, N, T> lhs, Matrix<M, N, T> rhs) noexcept {
+    Matrix<M, N, T> matrix(std::move(lhs));
 
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {

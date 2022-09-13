@@ -3,7 +3,7 @@
 #include "../Core/LinearAlgebra/matrix_2x2.hpp"
 
 int main() {
-    Matrix<3, 3> m1{
+    Matrix<3, 3, double> m1{
         {1, 2, 3},
         {4, 5, 6},
         {7, 8, 9}
