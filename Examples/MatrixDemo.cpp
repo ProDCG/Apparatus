@@ -14,5 +14,5 @@ int main() {
 
     apparatus::mat3x3 cam = apparatus::mat3x3(1.0f);
     
-    std::array<std::array<double, 3>, 3> arr{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    std::array<std::array<int, 3>, 2> arr = {{{1, 2, 3}, {4, 5, 6}}};
 }
