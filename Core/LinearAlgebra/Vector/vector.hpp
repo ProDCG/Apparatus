@@ -8,6 +8,11 @@ public:
 
     Vector();
 
+    template <typename T>
+    Vector(T val) {
+        at[0] = val;
+    }
+
     Vector(std::initializer_list<double> list) noexcept {
         
         std::copy(list.begin(), list.end(), Vector::begin());
@@ -23,8 +28,8 @@ public:
 };
 
 template<size_t C, typename T>
-Vector<m> operator * (Vector<m> lhs, double rhs) noexcept {
-    Vector<m> vector(std::move(lhs));
+Vector<C, T> operator * (Vector<C, T> lhs, double rhs) noexcept {
+    Vector<C, T> vector(std::move(lhs));
 
     std::for_each(vector.begin(), vector.end(), [rhs](auto& value) noexcept {
         value *= rhs;
@@ -34,8 +39,8 @@ Vector<m> operator * (Vector<m> lhs, double rhs) noexcept {
 }
 
 template<size_t C, typename T>
-Vector<m> operator / (Vector<m> lhs, double rhs) noexcept {
-    Vector<m> vector(std::move(lhs));
+Vector<C, T> operator / (Vector<C, T> lhs, double rhs) noexcept {
+    Vector<C, T> vector(std::move(lhs));
 
     std::for_each(vector.begin(), vector.end(), [rhs](auto& value) noexcept {
         value /= rhs;
@@ -45,8 +50,8 @@ Vector<m> operator / (Vector<m> lhs, double rhs) noexcept {
 }
 
 template<size_t C, typename T>
-Vector<m> operator + (Vector<m> lhs, Vector<m> rhs) noexcept {
-    Vector<m> vector(std::move(lhs));
+Vector<C, T> operator + (Vector<C, T> lhs, Vector<C, T> rhs) noexcept {
+    Vector<C, T> vector(std::move(lhs));
 
     for (int i = 0; i < m; i++) {
         vector[i] = lhs[i] + rhs[i];
@@ -56,8 +61,8 @@ Vector<m> operator + (Vector<m> lhs, Vector<m> rhs) noexcept {
 }
 
 template<size_t C, typename T>
-Vector<m> operator - (Vector<m> lhs, Vector<m> rhs) noexcept {
-    Vector<m> vector(std::move(lhs));
+Vector<C, T> operator - (Vector<C, T> lhs, Vector<C, T> rhs) noexcept {
+    Vector<C, T> vector(std::move(lhs));
 
     for (int i = 0; i < m; i++) {
         vector[i] = lhs[i] - rhs[i];
