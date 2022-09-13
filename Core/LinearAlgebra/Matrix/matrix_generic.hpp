@@ -1,4 +1,4 @@
-#include <matrix_obj.h>
+#include <matrix.h>
 
 namespace apparatus {
     template <size_t R, size_t C, typename T>

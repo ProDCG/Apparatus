@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "Matrix.h"
+#include "Library/matrix_obj.h"
 #include "Vector.h"
 
 int main() {

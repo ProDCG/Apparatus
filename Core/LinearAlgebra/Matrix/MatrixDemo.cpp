@@ -8,6 +8,7 @@ int main() {
         {4, 5, 6},
         {7, 8, 9}
     };
+    
     m1.print();
     m1.transpose();
     m1.print();
