@@ -48,6 +48,13 @@ public:
     void transpose() noexcept {
         // not implemented yet
     }
+
+    template <class T>
+    void rotate() noexcept {
+        if (std::is_same(T, apparatus::mat2)) {
+            std::cout << "MAT 2" << std::endl;
+        }
+    }
 };
 
 template <size_t M, size_t N, typename T> 
