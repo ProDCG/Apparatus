@@ -2,8 +2,6 @@
 
 #include <array>
 
-#include "matrix_obj.h"
-
 template <size_t m>
 class Vector : public std::array<double, m> {
 public:
