@@ -19,14 +19,20 @@ public:
         }
     }
 
-    Matrix(double i) {
-        for (int i = 0; i < 1; i++) {
-            for (int j = 0; j < 1; j++) {
+    template <typename T>
+    Matrix(T val) {
+        int i = 0, j = 0;
+        std::for_each(Matrix::begin(), Matrix::end(), [](auto& element) noexcept {
+            i++;
+            std::for_each(element.begin(), element.end(), [](auto& value) noexcept {
+                j++;
                 if (i == j) {
-                    
+                    value = val;
+                } else {
+                    value = 0.0f;
                 }
-            } 
-        }
+            });
+        });
     }
 
     void print() const {
