@@ -1,6 +1,7 @@
 #pragma once
 
 #include <array>
+#include <algorithm>
 
 template <size_t C, typename T>
 class Vector : public std::array<double, m> {
@@ -10,11 +11,12 @@ public:
 
     template <typename T>
     Vector(T val) {
-        at[0] = val;
+        std::for_each(Vector::begin(), Vector::end(), [](auto& value) noexcept {
+            value = val;
+        })
     }
 
     Vector(std::initializer_list<double> list) noexcept {
-        
         std::copy(list.begin(), list.end(), Vector::begin());
     }
 
