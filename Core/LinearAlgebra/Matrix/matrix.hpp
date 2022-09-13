@@ -10,7 +10,7 @@ class Matrix : public std::array<std::array<T, N>, M>{
 public:
     Matrix();
 
-    Matrix(std::initializer_list<std::initializer_list<auto>> list) noexcept {
+    Matrix(std::initializer_list<std::initializer_list<auto, auto>> list) noexcept {
         auto element_it = Matrix::begin();
 
         for (auto& row : list) {
