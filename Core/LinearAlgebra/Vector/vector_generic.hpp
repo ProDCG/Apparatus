@@ -2,7 +2,7 @@
 
 #include <../Core/LinearAlgebra/Vector/vector.hpp>
 
-namespace apparatus {
+namespace app {
     template <size_t C, typename T>
     Vector <C, T> vec;
 }

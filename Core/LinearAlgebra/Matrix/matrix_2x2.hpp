@@ -2,7 +2,7 @@
 
 #include <../Core/LinearAlgebra/Matrix/matrix_generic.hpp>
 
-namespace apparatus {
+namespace app {
 
     typedef Matrix<2, 2, int> i_mat2x2, i_mat2;
     typedef Matrix<2, 2, double> d_mat2x2, d_mat2, mat2x2, mat2;
