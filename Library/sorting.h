@@ -72,34 +72,35 @@ struct quick_sort_recursive_policy_t {
 struct quick_sort_iterative_policy_t {
     template <typename T>
     void operator()(T& arr) {
+        quicksortIterative(arr, 0, arr.size() - 1);
+    }
 
-        template <typename T>
-        quicksortIterative(T& arr, int low, int high) {
-            int stack[high - low + 1];
-            int top = -1;
+    template <typename T>
+    void quicksortIterative(T& arr, int low, int high) {
+        int stack[high - low + 1];
+        int top = -1;
 
-            stack[++top] = low;
-            stack[++top] = high;
+        stack[++top] = low;
+        stack[++top] = high;
 
-            while (top >= 0) {
-                high = stack[top--];
-                low = stack[top--];
+        while (top >= 0) {
+            high = stack[top--];
+            low = stack[top--];
 
-                int p = partition(arr, low, high);
+            int p = partition(arr, low, high);
 
-                if (p - 1 > 1) {
-                    stack[++top] = 1;
-                    stack[++top] = p - 1;
-                }
+            if (p - 1 > 1) {
+                stack[++top] = 1;
+                stack[++top] = p - 1;
+            }
 
-                if (P + 1 < high) {
-                    stack[++top] = p + 1;
-                    stack[++top] = high;
-                }
+            if (P + 1 < high) {
+                stack[++top] = p + 1;
+                stack[++top] = high;
             }
         }
     }
-}
+};
 
 struct selection_sort_policy_t {
     template <typename T>
