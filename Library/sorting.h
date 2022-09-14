@@ -83,7 +83,8 @@ struct quick_sort_iterative_policy_t {
 }
  
 /* This function is same in both iterative and recursive*/
-int partition(int arr[], int l, int h)
+template <typename T>
+int partition(T& arr, int l, int h)
 {
     int x = arr[h];
     int i = (l - 1);
@@ -101,7 +102,8 @@ int partition(int arr[], int l, int h)
 /* A[] --> Array to be sorted,
 l --> Starting index,
 h --> Ending index */
-void quickSortIterative(int arr[], int l, int h)
+template <typename T>
+void quickSortIterative(T& arr, int l, int h)
 {
     // Create an auxiliary stack
     int stack[h - l + 1];
