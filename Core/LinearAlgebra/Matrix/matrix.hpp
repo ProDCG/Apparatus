@@ -10,7 +10,7 @@ class Matrix : public std::array<std::array<T, N>, M>{
 public:
     Matrix();
 
-    Matrix(std::initializer_list<std::initializer_list<auto, auto>> list) noexcept {
+    Matrix(std::initializer_list<std::initializer_list<T>> list) noexcept {
         auto element_it = Matrix::begin();
 
         for (auto& row : list) {
@@ -19,7 +19,7 @@ public:
         }
     }
 
-    template <typename T>
+    // template <typename T>
     Matrix(T val) {
         int i = 0, j = 0;
         std::for_each(Matrix::begin(), Matrix::end(), [](auto& element) noexcept {
@@ -49,7 +49,6 @@ public:
         // not implemented yet
     }
 
-    template <class T>
     void rotate() noexcept {
         if (std::is_same(T, apparatus::mat2)) {
             std::cout << "MAT 2" << std::endl;
