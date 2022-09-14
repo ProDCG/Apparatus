@@ -51,7 +51,7 @@ public:
     }
 
     void rotate() noexcept {
-        if (std::is_same(T, app::mat2)) {
+        if (std::is_same(T, app::mat2) || std::is_same(T, app::mat3)) {
             std::cout << "MAT 2" << std::endl;
         }
     }
