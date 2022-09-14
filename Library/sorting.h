@@ -80,6 +80,23 @@ struct quick_sort_iterative_policy_t {
 
             stack[++top] = low;
             stack[++top] = high;
+
+            while (top >= 0) {
+                high = stack[top--];
+                low = stack[top--];
+
+                int p = partition(arr, low, high);
+
+                if (p - 1 > 1) {
+                    stack[++top] = 1;
+                    stack[++top] = p - 1;
+                }
+
+                if (P + 1 < high) {
+                    stack[++top] = p + 1;
+                    stack[++top] = high;
+                }
+            }
         }
     }
 }
