@@ -4,6 +4,7 @@
 #include <array>
 #include <iostream>
 #include <algorithm>
+#include <../Core/LinearAlgebra/Matrix/matrices.hpp>
 
 template <size_t M, size_t N, typename T>
 class Matrix : public std::array<std::array<T, N>, M>{
@@ -22,9 +23,10 @@ public:
     // template <typename T>
     Matrix(T val) {
         int i = 0, j = 0;
-        std::for_each(Matrix::begin(), Matrix::end(), [](auto& element) noexcept {
-            std::for_each(element.begin(), element.end(), [](auto& value) noexcept {
-                i++;
+        std::for_each(Matrix::begin(), Matrix::end(), [&](auto& element) noexcept {
+            i++;
+            std::for_each(element.begin(), element.end(), [&](auto& value) noexcept {
+                j++;
                 if (i == j) {
                     value = val;
                 } else {
@@ -49,7 +51,7 @@ public:
     }
 
     void rotate() noexcept {
-        if (std::is_same(T, apparatus::mat2)) {
+        if (std::is_same(T, app::mat2)) {
             std::cout << "MAT 2" << std::endl;
         }
     }
