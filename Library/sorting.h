@@ -31,19 +31,19 @@ struct insertion_sort_policy_t {
     }
 };
 
-struct quick_sort_policy_t {
+struct quick_sort_recursive_policy_t {
     template <typename T>
     void operator()(T& arr) {
-        quicksort(arr, 0, arr.size() - 1);
+        quicksortRecursive(arr, 0, arr.size() - 1);
     }
 
     template<typename T>
-    void quicksort(T& arr, int low, int high) {
+    void quicksortRecursive(T& arr, int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
 
-            quicksort(arr, low, pi - 1);
-            quicksort(arr, pi + 1, high);
+            quicksortRecursive(arr, low, pi - 1);
+            quicksortRecursive(arr, pi + 1, high);
         }
     }
 
@@ -68,6 +68,21 @@ struct quick_sort_policy_t {
         *b = t;
     }
 };
+
+struct quick_sort_iterative_policy_t {
+    template <typename T>
+    void operator()(T& arr) {
+
+        template <typename T>
+        quicksortIterative(T& arr, int low, int high) {
+            int stack[high - low + 1];
+            int top = -1;
+
+            stack[++top] = low;
+            stack[++top] = high;
+        }
+    }
+}
 
 struct selection_sort_policy_t {
     template <typename T>
