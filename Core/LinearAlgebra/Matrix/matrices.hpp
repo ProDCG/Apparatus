@@ -7,4 +7,3 @@
 #include <../Core/LinearAlgebra/Matrix/matrix_4x2.hpp>
 #include <../Core/LinearAlgebra/Matrix/matrix_4x3.hpp>
 #include <../Core/LinearAlgebra/Matrix/matrix_4x4.hpp>
-#include <../Core/LinearAlgebra/Matrix/matrix_generic.hpp>
