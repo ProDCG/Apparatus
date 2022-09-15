@@ -19,8 +19,7 @@ public:
             ++element_it;
         }
     }
-
-    // template <typename T>
+    
     Matrix(T val) {
         int i = 0, j = 0;
         std::for_each(Matrix::begin(), Matrix::end(), [&](auto& element) noexcept {
