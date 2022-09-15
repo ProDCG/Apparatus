@@ -1,6 +1,6 @@
 #pragma once
 
-#include <../Core/LinearAlgebra/Matrix/matrix_generic.hpp>
+#include <../Core/LinearAlgebra/Matrix/matrix.hpp>
 
 namespace app {
 
