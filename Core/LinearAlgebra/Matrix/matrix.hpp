@@ -46,13 +46,15 @@ public:
         });
     }
 
+    /*
+    TO BE IMPLEMENTED LATER
     void transpose() noexcept {
         
     }
 
     void rotate() noexcept {
 
-    }
+    } */
 };
 
 template <size_t M, size_t N, typename T> 
