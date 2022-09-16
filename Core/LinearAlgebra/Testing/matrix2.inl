@@ -11,7 +11,7 @@ Matrix<T, C, R>::Matrix(std::initializer_list<std::initializer_list<T>> list) {
 }
 
 Matrix<T, C, R>::Matrix<T, C, R>() {
-    
+
 }
 
 virtual ~Matrix();
