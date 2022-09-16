@@ -1,4 +1,5 @@
-#include <matrix2.hpp>
+#include <../Core/LinearAlgebra/Testing/matrix2.hpp>
+#include <vector2.hpp>
 
 namespace app {
     template <typename T, size_t C, size_t R>
