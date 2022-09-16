@@ -31,7 +31,7 @@ namespace app {
     template <typename T, size_t C, size_t R>
     Matrix<T, C, R> operator*(const T& rhs);
     template <typename T, size_t C, size_t R>
-    Matrix<T, C, R> operator/(const T& rhs);
+     Matrix<T, C, R> operator/(const T& rhs);
 
     template <typename T, size_t C, size_t R>
     Matrix<T, C, R> operator*(const Vector<T, R>& rhs);
