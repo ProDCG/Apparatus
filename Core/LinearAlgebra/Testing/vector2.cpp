@@ -24,7 +24,7 @@ app::Vector<T, C> operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
     Vector<T, C> newVec;
 
     for (int i = 0; i < lhs.vec.size(); i++) {
-        lhs.vec.at(i) + rhs.vec.at(i);
+        newVec.vec.at(i) = lhs.vec.at(i) + rhs.vec.at(i);
     }
 
     return newVec;
@@ -32,6 +32,6 @@ app::Vector<T, C> operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
 }
 
 template <typename T, size_t C>
-app::Vector<T, C> operator+=(app::Vector<T, C> rhs) {
+app::Vector<T, C> operator+=(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
 
 }
