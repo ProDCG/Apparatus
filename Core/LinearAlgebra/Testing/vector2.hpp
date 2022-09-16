@@ -15,4 +15,6 @@ namespace app {
 
     template <typename T, size_t C>
     Vector<T, C> operator+(const T& rhs);
+    template <typename T, size_t C>
+    Vector<T, C> operator+=(const T& rhs);
 }
