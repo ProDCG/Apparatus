@@ -25,12 +25,10 @@ app::Vector<T, C>::Vector(std::array<T, C> arr) {
 // }
 
 template <typename T, size_t C>
-app::Vector<T, C> operator+(app::Vector<T, C> lhs, T& val) {
-    app::Vector<T, C> newVec(std::move(lhs));
+app::Vector<T, C> operator+(const T& rhs) {
+    app::Vector<T, C> newVec(0.0f);
 
-    std::for_each(newVec.begin(), newVec.end(), [val](auto& element) {
-        element += val;
-    });
+    for (int i = 0; i < newVec.vec.size())
 
     return newVec;
 }
