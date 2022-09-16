@@ -28,9 +28,9 @@ template <typename T, size_t C>
 app::Vector<T, C> operator+(app::Vector<T, C> lhs, T& val) {
     app::Vector<T, C> newVec(std::move(lhs));
 
-    for (int i = 0; i < lhs.vec.size(); i++) {
-        newVec.vec.at(i) = lhs.vec.at(i) + rhs.vec.at(i);
-    }
+    std::for_each(newVec.begin(), newVec.end(), [val](auto& element) {
+        element += val;
+    });
 
     return newVec;
 }
