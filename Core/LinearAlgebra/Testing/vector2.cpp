@@ -20,3 +20,8 @@ app::Vector<T, C> app::Vector<T, C>::operator+(const T& rhs) {
 
     return newVec;
 }
+
+template <typename T, size_t C>
+std::array<T, C> app::Vector<T, C>::getVec() {
+    return this->vec;
+}
