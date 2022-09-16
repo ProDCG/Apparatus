@@ -18,5 +18,9 @@ namespace app {
             Matrix();
 
             Matrix<T, C, R> operator+(const Matrix<T, C, R>& rhs);
+            Matrix<T, C, R> operator-(const Matrix<T, C, R>& rhs);
+            Matrix<T, C, R> operator*(const Matrix<T, C, R>& rhs);
+
+            
     };
 }
