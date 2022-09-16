@@ -1,4 +1,4 @@
-#include <../Core/LinearAlgebra/Testing/matrix2.hpp>
+#include <matrix2.hpp>
 #include <vector2.hpp>
 
 namespace app {

@@ -13,4 +13,4 @@ namespace app {
     };
 }
 
-#include <vector2.inl>
+#include <../Core/LinearAlgebra/Testing/vector2.inl>
