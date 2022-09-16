@@ -13,6 +13,10 @@ namespace app {
                     std::copy(row.begin(), row.end(), element_it -> begin());
                     ++element_it;
                 }
-            }            
+            }
+
+            Matrix();
+
+            Matrix<T, C, R> operator+(const Matrix<T, C, R>& rhs);
     };
 }
