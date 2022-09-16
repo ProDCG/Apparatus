@@ -16,6 +16,6 @@ namespace app {
             Vector(T& num);
             virtual ~Vector();
 
-            Vector<T, C> operator+(T& val);
+            Vector<T, C> operator+(const T& rhs);
     };
 }
