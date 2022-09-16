@@ -21,9 +21,14 @@ app::Vector<T, C>::Vector(std::initializer_list<T> list) {
 
 template <typename T, size_t C>
 app::Vector<T, C> operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
+    Vector<T, C> newVec;
+
     for (int i = 0; i < lhs.vec.size(); i++) {
-        lhs.vec.at(i) += rhs.vec.at(i);
+        lhs.vec.at(i) + rhs.vec.at(i);
     }
+
+    return newVec;
+
 }
 
 template <typename T, size_t C>
