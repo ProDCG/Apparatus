@@ -7,14 +7,15 @@ namespace app {
     template <typename T, size_t C> class Vector{
         private:
             // std::array<T, C> vec;
-            Vector<T, C> operator+(Vector<T, C> lhs, T& val);
-            Vector<T, C> operator+=(Vector<T, C> rhs);
+            std::array<T, C> vec;
             
         public:
-            std::array<T, C> vec;
+            
             Vector(std::initializer_list<T> list);
             Vector(std::array<T, C> arr);
             Vector(T& num);
             virtual ~Vector();
+
+            Vector<T, C> operator+(T& val);
     };
 }
