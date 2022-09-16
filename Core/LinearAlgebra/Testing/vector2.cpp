@@ -13,7 +13,7 @@ app::Vector<T, C> app::operator+(const T& rhs) {
 }
 
 template <typename T, size_t C>
-app::Vector<T, C> app::operator+=(this, const T& rhs) {
+app::Vector<T, C> app::operator+=(Vector<T, C> lhs, const T& rhs) {
     std::for_each(vec.begin(), vec.end(), [rhs](auto& element) noexcept {
         element += rhs;
     });
