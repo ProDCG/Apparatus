@@ -5,6 +5,8 @@ app::Vector<T, C>::Vector(std::initializer_list<T> list) {
     std::copy(list.begin(), list.end(), app::Vector<T, C>::vec);
 }
 
+
+
 // template <typename T, size_t C>
 // app::Vector<T, C> app::operator+(const T& rhs) {
 //     std::for_each(vec.begin(), vec.end(), [rhs](auto& element) noexcept {
@@ -28,10 +30,9 @@ app::Vector<T, C> operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
     }
 
     return newVec;
-
 }
 
 template <typename T, size_t C>
 app::Vector<T, C> operator+=(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
-
+    // to be implemented
 }

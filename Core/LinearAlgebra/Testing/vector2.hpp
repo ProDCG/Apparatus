@@ -13,6 +13,8 @@ namespace app {
         public:
             std::array<T, C> vec;
             Vector(std::initializer_list<T> list);
+            Vector(Vector<T, C> vec);
+            Vector(T& num);
             virtual ~Vector();
     };
 }
