@@ -8,7 +8,6 @@ namespace app {
             std::array<std::array<T, C>, R> mat;
         public:
             Matrix(std::initializer_list<std::initializer_list<T>> list);
-            Matrix();
             virtual ~Matrix();
 
             Matrix<T, C, R> operator+(const Matrix<T, C, R>& rhs);
