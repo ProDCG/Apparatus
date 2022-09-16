@@ -38,12 +38,12 @@ namespace app {
     Matrix<T, C, R> operator-(const T& rhs);
     template <typename T, size_t C, size_t R>
     Matrix<T, C, R> operator*(const T& rhs);
-    template <typename T, size_t C, size_t R>
-    Matrix<T, C, R> operator/(const T& rhs);
+    // template <typename T, size_t C, size_t R>
+    // Matrix<T, C, R> operator/(const T& rhs);
 
     // OPERATOR OVERLOADING - VECTORS
     template <typename T, size_t C, size_t R>
     Matrix<T, C, R> operator*(const Vector<T, R>& rhs);
-    template <typename T, size_t C, size_t R>
-    Matrix<T, C, R> operator/(const Vector<T, R>& rhs);
+    // template <typename T, size_t C, size_t R>
+    // Matrix<T, C, R> operator/(const Vector<T, R>& rhs);
 }
