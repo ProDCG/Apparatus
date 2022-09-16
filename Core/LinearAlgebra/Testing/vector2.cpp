@@ -20,6 +20,6 @@ app::Vector<T, C>::Vector(std::initializer_list<T> list) {
 // }
 
 template <typename T, size_t C>
-app::Vector<T, C> operator+(Vector<T, C> lhs, Vector<T, C> rhs) {
-
+app::Vector<T, C> operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
+    
 }

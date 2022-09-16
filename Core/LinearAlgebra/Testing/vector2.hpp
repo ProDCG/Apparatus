@@ -14,12 +14,4 @@ namespace app {
             Vector(std::initializer_list<T> list);
             virtual ~Vector();
     };
-
-    // template <typename T, size_t C>
-    // Vector<T, C> operator+(const T& rhs);
-    // template <typename T, size_t C>
-    // void operator+=(Vector<T, C> lhs, const T& rhs);
-
-    template <typename T, size_t C>
-    
 }
