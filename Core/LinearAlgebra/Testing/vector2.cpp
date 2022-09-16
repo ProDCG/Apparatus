@@ -5,7 +5,10 @@ app::Vector<T, C>::Vector(std::initializer_list<T> list) {
     std::copy(list.begin(), list.end(), app::Vector<T, C>::vec);
 }
 
-
+template <typename T, size_t C>
+app::Vector<T, C>::Vector(std::array<T, C> arr) {
+    app::Vector<T, C>::vec = arr;
+}
 
 // template <typename T, size_t C>
 // app::Vector<T, C> app::operator+(const T& rhs) {
