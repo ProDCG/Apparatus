@@ -27,4 +27,4 @@ namespace app {
     };
 }
 
-#include <matrix2.inl>
+#include <../Core/LinearAlgebra/Testing/matrix2.cpp>
