@@ -20,11 +20,7 @@ namespace app {
     // OPERATOR OVERLOADING - MATRICES
     template <typename T, size_t C, size_t R>
     Matrix<T, C, R> operator+(const Matrix<T, C, R>& rhs) {
-        for (int i = 0; i < size_t R; i++) {
-            for (int j = 0; j < size_t C; j++) {
-                
-            }
-        }
+        
     }
     template <typename T, size_t C, size_t R>
     Matrix<T, C, R> operator-(const Matrix<T, C, R>& rhs);

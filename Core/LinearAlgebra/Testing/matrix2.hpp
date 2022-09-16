@@ -1,6 +1,7 @@
 #pragma once
 
 #include <array>
+#include <algorithm>
 
 namespace app {
     template <typename T, size_t C, size_t R> class Matrix {
