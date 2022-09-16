@@ -1,3 +1,5 @@
+#pragma once
+
 #include <array>
 
 namespace app {
@@ -6,16 +8,9 @@ namespace app {
         private:
             std::array<std::array<T, C>, R> mat;
         public:
-            Matrix(std::initializer_list<std::initializer_list<T>> list) {
-                auto element_it = mat.begin();
-
-                for (auto& row : list) {
-                    std::copy(row.begin(), row.end(), element_it -> begin());
-                    ++element_it;
-                }
-            }
-
+            Matrix(std::initializer_list<std::initializer_list<T>> list);
             Matrix();
+            virtual ~Matrix();
 
             Matrix<T, C, R> operator+(const Matrix<T, C, R>& rhs);
             Matrix<T, C, R> operator-(const Matrix<T, C, R>& rhs);
@@ -30,3 +25,5 @@ namespace app {
             Matrix<T, C, R> operator/(const Vector<T, R>& rhs);
     };
 }
+
+#include <matrix2.inl>
