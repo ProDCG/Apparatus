@@ -17,9 +17,13 @@ namespace app {
     };
 
     template <typename T, size_t C>
-    Vector<T, C> operator+(const T& rhs) {
+    Vector<T, C> operator+(const T& rhs);
+
+    /*
+    {
         std::for_each(vec.begin(), vec.end(), [rhs](auto& element) noexcept {
             element += rhs;
         });
     }
+    */
 }
