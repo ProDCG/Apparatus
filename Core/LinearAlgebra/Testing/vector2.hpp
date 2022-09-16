@@ -8,6 +8,7 @@ namespace app {
         private:
             // std::array<T, C> vec;
             Vector<T, C> operator+(Vector<T, C> lhs, Vector<T, C> rhs);
+            Vector<T, C> operator+=(Vector<T, C> rhs);
             
         public:
             std::array<T, C> vec;

@@ -25,3 +25,8 @@ app::Vector<T, C> operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
         lhs.vec.at(i) += rhs.vec.at(i);
     }
 }
+
+template <typename T, size_t C>
+app::Vector<T, C> operator+=(app::Vector<T, C> rhs) {
+
+}
