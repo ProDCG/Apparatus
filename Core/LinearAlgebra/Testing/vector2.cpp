@@ -27,7 +27,7 @@ app::Vector<T, C>::Vector() {
 
 template <typename T, size_t C>
 app::Vector<T, C> app::Vector<T, C>::operator+(const T& rhs) {
-    app::Vector<T, C> newVec();
+    app::Vector<T, C> newVec;
     // app::Vector<T, C> newVec(0.0f);
 
     // for (int i = 0; i < newVec.vec.size(); i++) {
@@ -38,7 +38,7 @@ app::Vector<T, C> app::Vector<T, C>::operator+(const T& rhs) {
         value += rhs;
     });
 
-    return app::Vector<T, C>::getVec;
+    return app::Vector<T, C>();
 }
 
 template <typename T, size_t C>
