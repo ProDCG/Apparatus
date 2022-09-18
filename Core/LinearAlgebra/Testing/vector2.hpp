@@ -13,7 +13,7 @@ namespace app {
             
             Vector(std::initializer_list<T> list);
             Vector(std::array<T, C> arr);
-            Vector(T& num);
+            Vector(const T& num);
             virtual ~Vector();
 
             Vector<T, C> operator+(const T& rhs);
