@@ -5,7 +5,7 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${workspaceFolder}/Library",
-                "${workspaceFolder}/Core",
+                "${workspaceFolder}/Core/LinearAlgebra/Testing",
                 "${workspaceFolder}/Examples"
             ],
             "defines": [

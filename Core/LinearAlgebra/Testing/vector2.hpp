@@ -22,4 +22,4 @@ namespace app {
     };
 }
 
-#include <../Core/LinearAlgebra/Testing/vector2.hpp>
+#include <../Core/LinearAlgebra/Testing/vector2.cpp>
