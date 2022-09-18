@@ -15,6 +15,7 @@ namespace app {
             Vector(std::initializer_list<T> list);
             Vector(std::array<T, C> arr);
             Vector(const T& num);
+            Vector();
             virtual ~Vector();
 
             Vector<T, C> operator+(const T& rhs);
