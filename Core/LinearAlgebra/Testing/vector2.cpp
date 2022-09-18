@@ -1,4 +1,4 @@
-#include "../Core/LinearAlgebra/Testing/vector2.hpp"
+#include "./Core/LinearAlgebra/Testing/vector2.hpp"
 
 template <typename T, size_t C>
 app::Vector<T, C>::Vector(std::initializer_list<T> list) {
