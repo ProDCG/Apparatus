@@ -28,7 +28,8 @@ app::Vector<T, C> app::Vector<T, C>::operator+(const T& rhs) {
     std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&](auto& value) noexcept {
         value += rhs;
     });
-    return newVec;
+
+    return app::Vector<T, C>::getVec;
 }
 
 template <typename T, size_t C>
