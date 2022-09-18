@@ -2,7 +2,7 @@
 
 template <typename T, size_t C>
 app::Vector<T, C>::Vector(std::initializer_list<T> list) {
-    std::copy(list.begin(), list.end(), app::Vector<T, C>::vec);
+    // std::copy(list.begin(), list.end(), app::Vector<T, C>::vec);
 }
 
 template <typename T, size_t C>
