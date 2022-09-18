@@ -19,6 +19,9 @@ namespace app {
             virtual ~Vector();
 
             void operator+(const T& rhs);
+            void operator-(const T& rhs);
+            void operator*(const T& rhs);
+            void operator/(const T& rhs);
 
             std::array<T, C> getVec();
     };
