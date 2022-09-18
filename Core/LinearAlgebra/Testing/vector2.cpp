@@ -35,7 +35,12 @@ void app::Vector<T, C>::operator+(const T& rhs) {
     });
 }
 
-
+template <typename T, size_t C>
+void app::Vector<T, C>::operator-(const T& rhs) {
+    std::for_each(app:Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&](auto& value) noexcept {
+        value -= rhs;
+    })
+}
 
 template <typename T, size_t C>
 std::array<T, C> app::Vector<T, C>::getVec() {
