@@ -1,0 +1,1 @@
+g++ -IC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing C:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing/vector_test.cpp -LC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing -Werror -Wall -Wextra -pedantic
