@@ -3,7 +3,7 @@
 #include <array>
 #include <algorithm>
 #include <initializer_list>
-
+ 
 namespace app {
     template <typename T, size_t C> class Vector{
         private:
