@@ -22,7 +22,7 @@ app::Vector<T, C> app::Vector<T, C>::operator+(const T& rhs) {
     app::Vector<T, C> newVec(0.0f);
 
     for (int i = 0; i < newVec.vec.size(); i++) {
-        newVec[i] += rhs;
+        newVec.vec[i] += rhs;
     }
 
     return newVec;
