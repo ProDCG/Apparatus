@@ -72,8 +72,8 @@ void app::Vector<T, C>::operator/(const T& rhs) {
 //         val /= vec::vec.at(counter);
 //     });
 // }
-template <class V, typename T, size_t C>
-void app::Vector<T, C>::operator+(const V& rhs) {
+template <typename T, size_t C>
+void app::Vector<T, C>::operator+(app::Vector<T, C> rhs) {
     int counter = 0;
     std::for_each(rhs.vec.begin(), rhs.vec.end(), [&counter](auto &val) {
         val /= rhs.vec.at(counter);

@@ -25,7 +25,7 @@ namespace app {
             void operator*(const T& rhs);
             void operator/(const T& rhs);
 
-            void operator+(const T& rhs);
+            void operator+(Vector<T, C> rhs);
             void operator-(Vector<T, C> vec);
             void operator*(Vector<T, C> vec);
             void operator/(Vector<T, C> vec);
