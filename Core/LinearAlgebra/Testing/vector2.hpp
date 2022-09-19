@@ -30,7 +30,7 @@ namespace app {
             void operator*(const Vector<T, C> vec);
             void operator/(const Vector<T, C> vec);
 
-            std::string print();
+            void print();
             std::array<T, C> getVec();
     };
 }

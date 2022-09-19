@@ -5,6 +5,6 @@
 int main() {
     app::Vector<int, 3> vec3{1, 2, 3};
     vec3 - 5;
-    vec3.print();
+    std::cout << vec3.print() << std::endl;
     return 0;
 }

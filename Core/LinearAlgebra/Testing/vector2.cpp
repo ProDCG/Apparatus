@@ -97,8 +97,11 @@ void app::Vector<T, C>::operator/(const Vector<T, C> vec) {
 // MISC FUNCTIONS
 // ----------------
 template <typename T, size_t C>
-std::string app::Vector<T, C>::print() {
-    std::cout << "VEC: "  << std::endl;
+void app::Vector<T, C>::print() {
+    std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&](auto& value) noexcept {
+        std::cout << value;
+    });
+    std::cout << '\n';
 }
 
 template <typename T, size_t C>
