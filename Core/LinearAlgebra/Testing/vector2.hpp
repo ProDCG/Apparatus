@@ -25,10 +25,10 @@ namespace app {
             void operator*(const T& rhs);
             void operator/(const T& rhs);
 
-            void operator+(Vector<T, C> rhs);
-            void operator-(Vector<T, C> vec);
-            void operator*(Vector<T, C> vec);
-            void operator/(Vector<T, C> vec);
+            void operator+(app::Vector<T, C> rhs);
+            void operator-(app::Vector<T, C> vec);
+            void operator*(app::Vector<T, C> vec);
+            void operator/(app::Vector<T, C> vec);
 
             void print();
             std::array<T, C> getVec();
