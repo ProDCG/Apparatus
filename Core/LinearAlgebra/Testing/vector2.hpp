@@ -3,6 +3,8 @@
 #include <array>
 #include <algorithm>
 #include <initializer_list>
+#include <iostream>
+#include <string>
  
 namespace app {
     template <typename T, size_t C> class Vector{
@@ -28,6 +30,7 @@ namespace app {
             void operator*(const Vector<T, C> vec);
             void operator/(const Vector<T, C> vec);
 
+            std::string print();
             std::array<T, C> getVec();
     };
 }

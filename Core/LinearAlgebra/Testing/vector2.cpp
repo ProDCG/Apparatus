@@ -97,6 +97,11 @@ void app::Vector<T, C>::operator/(const Vector<T, C> vec) {
 // MISC FUNCTIONS
 // ----------------
 template <typename T, size_t C>
+std::string app::Vector<T, C>::print() {
+    std::cout << "VEC: "  << std::endl;
+}
+
+template <typename T, size_t C>
 std::array<T, C> app::Vector<T, C>::getVec() {
     return this->vec;
 }
