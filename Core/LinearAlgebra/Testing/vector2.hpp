@@ -23,6 +23,11 @@ namespace app {
             void operator*(const T& rhs);
             void operator/(const T& rhs);
 
+            void operator+(const Vector<T, C> vec);
+            void operator-(const Vector<T, C> vec);
+            void operator*(const Vector<T, C> vec);
+            void operator/(const Vector<T, C> vec);
+
             std::array<T, C> getVec();
     };
 }
