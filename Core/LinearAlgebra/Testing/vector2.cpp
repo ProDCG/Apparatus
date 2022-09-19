@@ -99,7 +99,7 @@ void app::Vector<T, C>::operator/(const Vector<T, C> vec) {
 template <typename T, size_t C>
 void app::Vector<T, C>::print() {
     std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&](auto& value) noexcept {
-        std::cout << value;
+        std::cout << value << ' ';
     });
     std::cout << '\n';
 }
