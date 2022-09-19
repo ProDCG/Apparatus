@@ -67,30 +67,38 @@ void app::Vector<T, C>::operator/(const T& rhs) {
 // ----------------
 template <typename T, size_t C>
 void app::Vector<T, C>::operator+(const Vector<T, C> vec) {
-    for (int i = 0; i < C; i++) {
-        app::Vector<T, C>::vec.at(i) += vec.vec.at(i);
-    }
+    int counter = 0;
+    std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&counter](auto &val) {
+        val /= vec::vec.at(counter);
+    });
 }
 
 template <typename T, size_t C>
 void app::Vector<T, C>::operator-(const Vector<T, C> vec) {
-    for (int i = 0; i < C; i++) {
-        app::Vector<T, C>::vec.at(i) -= vec.vec.at(i);
-    }
+    int counter = 0;
+    std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&counter](auto &val) {
+        val /= vec::vec.at(counter);
+    });
 }
 
 template <typename T, size_t C>
-void app::Vector<T, C>::operator*(const Vector<T, C> vec) {
-    for (int i = 0; i < C; i++) {
-        app::Vector<T, C>::vec.at(i) *= vec.vec.at(i);
-    }
+void app::Vector<T, C>::operator*(const Vector<T, C> rhs) {
+    int counter = 0;
+    std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&counter](auto &val) {
+        val /= rhs::vec.at(counter);
+    });
 }
 
 template <typename T, size_t C>
-void app::Vector<T, C>::operator/(const Vector<T, C> vec) {
-    for (int i = 0; i < C; i++) {
-        app::Vector<T, C>::vec.at(i) /= vec.vec.at(i);
-    }
+void app::Vector<T, C>::operator/(const Vector<T, C> rhs) {
+    // int counter = 0;
+    // for (auto it = app::Vector<T, C>::vec.begin(), it != app::Vector<T, C>::vec.end(); ++it, ++counter) {
+    //     app::Vector<T, C>::vec.at(i) /= vec.vec.at(i);
+    // }
+    int counter = 0;
+    std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&counter](auto &val) {
+        val /= rhs::vec.at(counter);
+    });
 }
 
 // ----------------
