@@ -97,9 +97,13 @@ void app::Vector<T, C>::operator*(Vector<T, C> rhs) {
 }
 
 template <typename T, size_t C>
-void app::Vector<T, C>::operator/(Vector<T, C> rhs) {
+app::Vector<T, C> app::Vector<T, C>::operator/(const app::Vector<T, C> rhs) {
+    // int counter = 0;
+    // std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&counter](auto &val) {
+    //     val /= rhs::vec.at(counter);
+    // });
     int counter = 0;
-    std::for_each(app::Vector<T, C>::vec.begin(), app::Vector<T, C>::vec.end(), [&counter](auto &val) {
+    std::for_each(rhs::vec.begin(), rhs::vec.end(), [&](auto &val) {
         val /= rhs::vec.at(counter);
     });
 }

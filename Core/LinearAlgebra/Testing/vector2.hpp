@@ -28,7 +28,7 @@ namespace app {
             void operator+(app::Vector<T, C> rhs);
             void operator-(app::Vector<T, C> vec);
             void operator*(app::Vector<T, C> vec);
-            void operator/(app::Vector<T, C> vec);
+            app::Vector<T, C> operator/(const app::Vector<T, C> rhs);
 
             void print();
             std::array<T, C> getVec();
