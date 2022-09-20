@@ -8,7 +8,10 @@
 template <typename T, size_t C>
 class Vector : public std::array<T, C> {
     public:
-        Vector(std::initializer_list<T>);
+        Vector();
+        Vector(std::initializer_list<T> list) {
+            std::copy(list.begin(), list.end(), Vector::begin());
+        }
         Vector(double);
         Vector(int);
         Vector(std::array<T, C>);
