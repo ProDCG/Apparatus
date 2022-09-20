@@ -7,7 +7,8 @@
 #include <string>
  
 namespace app {
-    template <typename T, size_t C> class Vector{
+    template <typename T, size_t C>
+    class Vector{
         private:
             std::array<T, C> vec;
             
@@ -24,7 +25,7 @@ namespace app {
             void operator*(const T& rhs);
             void operator/(const T& rhs);
 
-            void operator+(Vector<T, C> lhs, Vector<T, C> rhs);
+            app::Vector<T, C> operator+(app::Vector<T, C>& rhs);
 
             void print();
             std::array<T, C> getVec();

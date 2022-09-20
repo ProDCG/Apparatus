@@ -65,11 +65,19 @@ void app::Vector<T, C>::operator/(const T& rhs) {
 // ----------------
 // OPERATOR OVERLOADS, VECTOR
 // ----------------
+
+// want to pass a vector as a param, so basically vec3 + vec2, where it adds the values to vec3
+// or where i can do some_vec = vec3 + vec2
+// and thats about it and code no worky
 template <typename T, size_t C>
-void app::Vector<T, C>::operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
+app::Vector<T, C> app::Vector<T, C>::operator+(app::Vector<T, C>& rhs) {
+    app::Vector<T, C> arr;
+    
     for (int i = 0; i < lhs::vec.size(); i++) {
-        lhs::vec.at(i) += rhs::vec.at(i);
+        arr[i] = lhs::vec[i] + rhs::vec[i];
     }
+
+    return arr;
 }
 
 // ----------------
