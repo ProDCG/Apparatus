@@ -73,11 +73,11 @@ template <typename T, size_t C>
 app::Vector<T, C> app::Vector<T, C>::operator+(app::Vector<T, C>& rhs) {
     app::Vector<T, C> arr;
     
-    for (int i = 0; i < lhs::vec.size(); i++) {
-        arr[i] = lhs::vec[i] + rhs::vec[i];
+    for (int i = 0; i < std::size(); i++) {
+        arr[i] = (*this)[i] + rhs.vec[i];
     }
 
-    return arr;
+    return arr
 }
 
 // ----------------
