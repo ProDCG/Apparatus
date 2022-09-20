@@ -63,6 +63,16 @@ void app::Vector<T, C>::operator/(const T& rhs) {
 }
 
 // ----------------
+// OPERATOR OVERLOADS, VECTOR
+// ----------------
+template <typename T, size_t C>
+void app::Vector<T, C>::operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs) {
+    for (int i = 0; i < lhs::vec.size(); i++) {
+        lhs::vec.at(i) += rhs::vec.at(i);
+    }
+}
+
+// ----------------
 // MISC FUNCTIONS
 // ----------------
 template <typename T, size_t C>

@@ -24,6 +24,8 @@ namespace app {
             void operator*(const T& rhs);
             void operator/(const T& rhs);
 
+            void operator+(Vector<T, C> lhs, Vector<T, C> rhs);
+
             void print();
             std::array<T, C> getVec();
     };
