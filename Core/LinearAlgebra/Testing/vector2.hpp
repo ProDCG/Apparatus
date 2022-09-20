@@ -25,6 +25,12 @@ namespace app {
             void operator*(const T& rhs);
             void operator/(const T& rhs);
 
+            app::Vector<T, C> operator+(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
+            app::Vector<T, C> operator-(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
+            app::Vector<T, C> operator*(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
+            app::Vector<T, C> operator/(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
+            
+
             void operator+(app::Vector<T, C> rhs);
             void operator-(app::Vector<T, C> vec);
             void operator*(app::Vector<T, C> vec);
