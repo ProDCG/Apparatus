@@ -9,7 +9,6 @@
 namespace app {
     template <typename T, size_t C> class Vector{
         private:
-            // std::array<T, C> vec;
             std::array<T, C> vec;
             
         public:
@@ -25,12 +24,17 @@ namespace app {
             void operator*(const T& rhs);
             void operator/(const T& rhs);
 
-            Vector<T, C> operator+(Vector<T, C> lhs(), Vector<T, C> rhs());
-            app::Vector<T, C> operator-(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
-            app::Vector<T, C> operator*(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
-            app::Vector<T, C> operator/(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
-            
+            Vector<T, C> operator+(Vector<T, C> lhs, Vector<T, C> rhs) {
+                Vector<T, C> vector(std::move(lhs));
 
+                for (int i = 0; i < c; i++) {
+                    vector[i] = lhs::vec[i] + rhs::vec[i];
+                }
+            }
+            // app::Vector<T, C> operator-(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
+            // app::Vector<T, C> operator*(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
+            // app::Vector<T, C> operator/(app::Vector<T, C> lhs, app::Vector<T, C> rhs);
+            
             void operator+(app::Vector<T, C> rhs);
             void operator-(app::Vector<T, C> vec);
             void operator*(app::Vector<T, C> vec);
