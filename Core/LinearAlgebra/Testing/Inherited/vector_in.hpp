@@ -14,8 +14,9 @@ class Vector : public std::array<T, C> {
         }
         Vector(double);
         Vector(int);
-        Vector(std::array<T, C>);
-        Vector(const Vector<T, C>&);
+        Vector(std::array<T, C> arr) {
+            std::copy(arr.begin(), arr.end(), Vector::begin());
+        }
 };
 
 template <typename T, size_t C>

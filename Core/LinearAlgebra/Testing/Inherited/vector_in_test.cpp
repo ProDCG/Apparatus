@@ -5,5 +5,6 @@ int main() {
     Vector<double, 3> vec2{4, 5, 6};
     vec2 + 2;
     Vector<double, 3> vec3{7, 8, 9};
+    std::cout << vec2[0] << '\n';
     return 0;
 }
