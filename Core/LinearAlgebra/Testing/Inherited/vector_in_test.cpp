@@ -8,5 +8,6 @@ int main() {
     std::cout << vec3[0] << '\n';
     std::cout << vec3[1] << '\n';
     std::cout << vec3[2] << '\n';
+    std::cout << magnitude(vec1) << '\n';
     return 0;
 }
