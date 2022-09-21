@@ -20,7 +20,7 @@ class Vector : public std::array<T, C> {
 };
 
 // -----------------------------
-// Operator Overloads, SCALAR
+// Operator Overloads, VECTOR, SCALAR, VOID
 // -----------------------------
 template <typename T, size_t C>
 Vector<T, C> operator + (Vector<T, C> lhs, double scalar) {
@@ -59,7 +59,7 @@ Vector<T, C> operator / (Vector<T, C> lhs, double scalar) {
 }
 
 // -----------------------------
-// Operator Overloads, VECTOR
+// Operator Overloads, VECTOR, VECTOR, VECTOR
 // -----------------------------
 template <typename T, size_t C>
 Vector<T, C> operator + (Vector<T, C> lhs, Vector<T, C> rhs) {
@@ -96,3 +96,7 @@ Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
 
     return lhs;
 }
+
+// -----------------------------
+// Misc Functions
+// -----------------------------
