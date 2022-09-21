@@ -36,3 +36,12 @@ Vector<T, C> operator - (Vector<T, C> lhs, double scalar) {
 
     return lhs;
 }
+
+template <typename T, size_t C>
+Vector<T, C> operator * (Vector<T, C> lhs, double scalar) {
+    std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
+        element *= scalar;
+    });
+
+    return lhs;
+}
