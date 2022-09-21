@@ -19,6 +19,9 @@ class Vector : public std::array<T, C> {
         }
 };
 
+// -----------------------------
+// Operator Overloads, SCALAR
+// -----------------------------
 template <typename T, size_t C>
 Vector<T, C> operator + (Vector<T, C> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
@@ -32,7 +35,7 @@ template <typename T, size_t C>
 Vector<T, C> operator - (Vector<T, C> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element -= scalar;
-    })
+    });
 
     return lhs;
 }
@@ -52,5 +55,17 @@ Vector<T, C> operator / (Vector<T, C> lhs, double scalar) {
         element /= scalar;
     });
 
+    return lhs;
+}
+
+// -----------------------------
+// Operator Overloads, VECTOR
+// -----------------------------
+template <typename T, size_t C>
+Vector<T, C> operator + (Vector<T, C> lhs, Vector<T, C> rhs) {
+    for (int i = 0; i < lhs.size(); i++) {
+        lhs.at(i) += rhs.at(i);
+    }
+    
     return lhs;
 }
