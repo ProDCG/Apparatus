@@ -109,3 +109,8 @@ Vector<T, C> pow(Vector<T, C> lhs, double scalar) {
 
     return lhs;
 }
+
+template <typename T, size_t C>
+T& magnitude() {
+    return std::sqrt();
+}
