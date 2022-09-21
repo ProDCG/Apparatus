@@ -20,8 +20,10 @@ class Vector : public std::array<T, C> {
 };
 
 template <typename T, size_t C>
-void operator + (Vector<T, C> lhs, double rhs) {
+Vector<T, C> operator + (Vector<T, C> lhs, double rhs) {
     std::for_each(lhs.begin(), lhs.end(), [rhs](auto& element) noexcept {
         element += rhs;
     });
+
+    return lhs;
 }
