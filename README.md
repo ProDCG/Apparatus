@@ -29,11 +29,11 @@ sort<insertion_sort_policy_t>(/*reference to an array*/);
 ```
 
 
-Some of these possible sorting algorithms are:
+Some of these possible sorting algorithms are:\n
 `
-insertion_sort_policy_t
-quick_sort_iterative_t
-bogo_sort_t
+insertion_sort_policy_t\n
+quick_sort_iterative_t\n
+bogo_sort_t\n
 `
 
 
