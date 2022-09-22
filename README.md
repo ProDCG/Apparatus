@@ -28,7 +28,11 @@ Another strong use case that this language gives you is access to a wide variety
 // Use the insertion sorting algorithm, will automatically modify the array
 sort<insertion_sort_policy_t>(/*reference to an array*/);
 ```
-
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 Some of these possible sorting algorithms are:
 `
 insertion_sort_policy_t
