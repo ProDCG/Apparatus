@@ -111,11 +111,15 @@ Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
 // -----------------------------
 template <typename T, size_t C>
 Vector<T, C> pow(Vector<T, C> lhs, T& scalar) {
-    std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
-        element = std::pow(element, scalar);
-    });
+    if (!standardType(lhs)) {
+        throw std::invalid_argument("Vector must be of type int/double");
+    } else {
+        std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
+            element = std::pow(element, scalar);
+        });
 
-    return lhs;
+        return lhs;
+    }
 }
 
 template <typename T, size_t C>
