@@ -111,15 +111,12 @@ Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
 // -----------------------------
 template <typename T, size_t C>
 Vector<T, C> pow(Vector<T, C> lhs, T& scalar) {
-    if (!standardType(lhs)) {
-        throw std::invalid_argument("Vector must be of type int/double");
-    } else {
-        std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
-            element = std::pow(element, scalar);
-        });
+    standardType(lhs);
+    std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
+        element = std::pow(element, scalar);
+    });
 
-        return lhs;
-    }
+    return lhs;
 }
 
 template <typename T, size_t C>
@@ -136,7 +133,7 @@ T magnitude(Vector<T, C> lhs) {
 }
 
 template <typename T, size_t C>
-bool standardType(Vector<T, C> lhs) {
+void standardType(Vector<T, C> lhs) {
     if !(std::is_same<T, double>() || std::is_same<T, int>()) {
         throw std::invalid_argument("Vector must be of type int/double");
     }
