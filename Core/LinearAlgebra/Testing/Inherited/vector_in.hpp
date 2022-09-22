@@ -137,5 +137,7 @@ T magnitude(Vector<T, C> lhs) {
 
 template <typename T, size_t C>
 bool standardType(Vector<T, C> lhs) {
-    return (std::is_same<T, double>() || std::is_same<T, int>());
+    if !(std::is_same<T, double>() || std::is_same<T, int>()) {
+        throw std::invalid_argument("Vector must be of type int/double");
+    }
 }
