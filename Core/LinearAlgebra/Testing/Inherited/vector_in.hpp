@@ -110,7 +110,7 @@ Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
 // Misc Functions
 // -----------------------------
 template <typename T, size_t C>
-Vector<T, C> pow(Vector<T, C> lhs, T& scalar) {
+Vector<T, C> powerFunc(Vector<T, C> lhs, double scalar) {
     standardType(lhs);
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element = std::pow(element, scalar);
