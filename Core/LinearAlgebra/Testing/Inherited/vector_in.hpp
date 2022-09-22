@@ -110,7 +110,7 @@ Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
 // Misc Functions
 // -----------------------------
 template <typename T, size_t C>
-Vector<T, C> pow(Vector<T, C> lhs, double scalar) {
+Vector<T, C> pow(Vector<T, C> lhs, T& scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element = std::pow(element, scalar);
     });
@@ -129,4 +129,9 @@ T magnitude(Vector<T, C> lhs) {
     }
 
     return sum;
+}
+
+template <typename T, size_t C>
+bool standardType(Vector<T, C> lhs) {
+    return (std::is_same<T, double>() || std::is_same<T, int>());
 }
