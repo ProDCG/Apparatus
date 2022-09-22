@@ -19,8 +19,7 @@ Custom types allow for strong readability and flexibility when declaraing vector
 // on the value passed into the parameter.
 vec3 camera = vec3(1.0);
 ```
-<br/>
-<br/>
+
 Another strong use case that this language gives you is access to a wide variety of sorting algorithms.
 ```cpp
 #include <sorting.h>
