@@ -29,6 +29,11 @@ Another strong use case that this language gives you is access to a wide variety
 sort<insertion_sort_policy_t>(/*reference to an array*/);
 ```
 
-
+Some of these possible sorting algorithms are:
+`
+insertion_sort_policy_t
+quick_sort_iterative_t
+bogo_sort_t
+`
 
 There are more features to come, along with matrix multiplication, stressen algorithm implementation, and more useful utilities to speed up performance.
