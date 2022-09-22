@@ -111,9 +111,9 @@ Vector<T, C> pow(Vector<T, C> lhs, double scalar) {
 }
 
 template <typename T, size_t C>
-T& magnitude(Vector<T, C> lhs) {
+T magnitude(Vector<T, C> lhs) {
     T sum = {};
-    if constexpr ((std::is_same<T, double>) || (std::is_same<T, int>)) {
+    if constexpr ((std::is_same<T, double>()) || (std::is_same<T, int>())) {
         for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
             sum += lhs.at(i);
         }
