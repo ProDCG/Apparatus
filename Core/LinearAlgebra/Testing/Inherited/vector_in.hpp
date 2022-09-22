@@ -13,8 +13,16 @@ class Vector : public std::array<T, C> {
         Vector(std::initializer_list<T> list) {
             std::copy(list.begin(), list.end(), Vector::begin());
         }
-        Vector(double);
-        Vector(int);
+        Vector(double num) {
+            std::for_each(Vector::begin(), Vector::end(), [&](auto& element) noexcept {
+                element = num;
+            });
+        }
+        Vector(int num) {
+            std::for_each(Vector::begin(), Vector::end(), [&](auto& element) noexcept {
+                element = num;
+            });
+        }
         Vector(std::array<T, C> arr) {
             std::copy(arr.begin(), arr.end(), Vector::begin());
         }
