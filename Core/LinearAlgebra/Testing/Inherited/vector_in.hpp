@@ -135,10 +135,6 @@ T magnitude(Vector<T, C> lhs) {
 
 template <typename T, size_t C>
 void standardType(Vector<T, C> lhs) {
-    // if (!((std::is_same<int, typeid(lhs.at(0)).name()>::value) || (std::is_same<double, lhs.at(0)>::value))) {
-    //     throw std::invalid_argument("Vector must be of type int/double");
-    // }
-
     if (!(typeid(double) == typeid(lhs.at(0)))) {
         std::cout << typeid(int).name() << " " << typeid(double).name() << " " << typeid(lhs.at(0)).name() << '\n';
         throw std::invalid_argument("Vector must be of type int/double");
