@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 #include <algorithm>
+#include <typeinfo>
 
 template <typename T, size_t C>
 class Vector : public std::array<T, C> {
@@ -134,7 +135,11 @@ T magnitude(Vector<T, C> lhs) {
 
 template <typename T, size_t C>
 void standardType(Vector<T, C> lhs) {
-    if (!((std::is_same<T, int>()) || (std::is_same<T, double>()))) {
+    // if (!((std::is_same<int, typeid(lhs.at(0)).name()>::value) || (std::is_same<double, lhs.at(0)>::value))) {
+    //     throw std::invalid_argument("Vector must be of type int/double");
+    // }
+
+    if (!(typeid(int) == typeid(lhs.at(0))) == (typeid(double) == typeid(lhs.at(0)))) {
         throw std::invalid_argument("Vector must be of type int/double");
     }
 }
