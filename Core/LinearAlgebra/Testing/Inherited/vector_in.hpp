@@ -175,4 +175,10 @@ void standardType(Vector<T, C> lhs) {
         std::cout << typeid(int).name() << " " << typeid(double).name() << " " << typeid(lhs.at(0)).name() << '\n';
         throw std::invalid_argument("Vector must be of type int/double");
     }
+
+    if (!(typeid(int) == typeid(lhs.at(0)))) {
+        std::cout << typeid(int).name() << " " << typeid(double).name() << " " << typeid(lhs.at(0)).name() << '\n';
+        throw std::invalid_argument("Vector must be of type int/double");
+    }
+}
 }
