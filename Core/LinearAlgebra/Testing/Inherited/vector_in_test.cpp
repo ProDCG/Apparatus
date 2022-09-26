@@ -6,6 +6,7 @@ int main() {
     std::cout << cam[0] << std::endl;
     std::cout << cam[1] << std::endl;
     std::cout << cam[2] << std::endl;
+    cam.print();
 
     return 0;
 }

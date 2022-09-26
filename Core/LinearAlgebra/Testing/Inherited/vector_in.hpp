@@ -27,6 +27,14 @@ class Vector : public std::array<T, C> {
         Vector(std::array<T, C> arr) {
             std::copy(arr.begin(), arr.end(), Vector::begin());
         }
+
+        void print() const {
+            std::for_each(begin(), end(), [](auto& element) noexcept {
+                std::cout << element << " ";
+            });
+
+            std::cout << '\n';
+        }
 };
 
 // -----------------------------
