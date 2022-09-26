@@ -18,7 +18,6 @@ Custom types allow for strong readability and flexibility when declaraing vector
 
 // Use of custom type, defaults to double, or defines the type based
 // on the value passed into the parameter.
-
 app::vec3 camera = vec3(1.0);
 ```
 Another strong use case that this language gives you is access to a wide variety of sorting algorithms.
