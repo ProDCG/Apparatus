@@ -11,7 +11,9 @@ class Matrix : public std::array<std::array<T, C>, R> {
         Matrix();
 
         Matrix(double num) {
-
+            int i = 0;
+            std::for_each([0].begin(), [0].end(), [&](auto& element) noexcept {
+                std::cout << i << ' ' << std::endl;
+            });
         }
-
 };
