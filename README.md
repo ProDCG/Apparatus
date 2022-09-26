@@ -14,6 +14,7 @@ Vector<double, 3> vec{1, 2, 3};
 Custom types allow for strong readability and flexibility when declaraing vectors
 ```cpp
 #include <vector_in.hpp>
+#include <vector_in_typedef.hpp>
 
 // Use of custom type, defaults to double, or defines the type based
 // on the value passed into the parameter.
