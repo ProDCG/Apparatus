@@ -108,7 +108,7 @@ template <typename T, size_t C>
 Vector<T, C> operator -= (Vector<T, C> lhs, Vector<T, C> rhs) {
     
 }
-
+ 
 template <typename T, size_t C>
 Vector<T, C> operator * (Vector<T, C> lhs, Vector<T, C> rhs) {
     for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
