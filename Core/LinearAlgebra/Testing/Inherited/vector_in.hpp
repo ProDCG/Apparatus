@@ -181,4 +181,3 @@ void standardType(Vector<T, C> lhs) {
         throw std::invalid_argument("Vector must be of type int/double");
     }
 }
-}
