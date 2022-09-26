@@ -7,7 +7,7 @@ An example use case of declaring a vector using Apparatus:
 #include <vector_in.hpp>
 
 // Declare a vector of type double and length 3
-Vector<double, 3> vec1{1, 2, 3};
+Vector<double, 3> vec{1, 2, 3};
 ```
 
 
@@ -18,7 +18,7 @@ Custom types allow for strong readability and flexibility when declaraing vector
 // Use of custom type, defaults to double, or defines the type based
 // on the value passed into the parameter.
 
-vec3 camera = vec3(1.0);
+app::vec3 camera = vec3(1.0);
 ```
 Another strong use case that this language gives you is access to a wide variety of sorting algorithms.
 ```cpp
