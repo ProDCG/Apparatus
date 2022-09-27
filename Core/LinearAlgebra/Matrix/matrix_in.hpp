@@ -26,6 +26,7 @@ Matrix<T, C, R> operator + (Matrix<T, C, R> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end() [](auto& row) noexcept {
         std::for_each(row.begin(), row.end() [](auto& element) noexcept {
             value += scalar;
+            std::cout << "here" << std::endl;
         });
     });
 }
