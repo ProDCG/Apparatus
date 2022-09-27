@@ -159,12 +159,16 @@ Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
 template <typename T, size_t C, size_t R>
 Vector<T, C> operator * (Matrix<T, C, R> lhs, Vector<T, C> rhs) {
     Vector<T, C> vector;
-    std::for_each(lhs.begin(), lhs.end(), [&](auto& row) noexcept {
-        int i = 0;
-        std::for_each(row.begin(), row.end(), [&i](auto& element) noexcept {
-            element * 
+    int i = 0;
+    std::for_each(lhs.begin(), lhs.end(), [&i](auto& row) noexcept {
+        int sum = 0;
+        std::for_each(row.begin(), row.end(), [&j](auto& element) noexcept {
+            sum += (element * rhs[i]);
         });
+        vector[i] = sum;
+        i++;
     });
+    return vector;
 }
 
 // -----------------------------
