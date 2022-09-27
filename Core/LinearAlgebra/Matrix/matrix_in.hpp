@@ -19,7 +19,14 @@ class Matrix : public std::array<std::array<T, C>, R> {
             });
         }
         Matrix(int num) {}
-        Matrix(std::initializer_list<std::initializer_list<T>>) {}
+        Matrix(std::initializer_list<std::initializer_list<T>> list) {
+            auto element_it = Matrix::begin();
+
+            for (auto& row : list) {
+                std::copy(row.begin(), row.end(), element_it->begin());
+                ++element_it;
+            }
+        }
 
         void print() const {
             std::for_each(Matrix::begin(), Matrix::end(), [&](auto& row) noexcept {
