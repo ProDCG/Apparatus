@@ -3,7 +3,9 @@
 
 int main() {
     app::mat3 matOne = app::mat3(1.0f);
-    app::mat3 matTwo = app::mat3(1.0f);
+    //app::mat3 matTwo = app::mat3(1.0f);
+    matOne.print();
     matOne + 2;
+    matOne.print();
     return 0;
 }
