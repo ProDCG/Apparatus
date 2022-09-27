@@ -1,3 +1,5 @@
 #include "matrix_in.hpp"
 
-typedef Matrix<double, 3, 3> mat3;
+namespace app {
+    typedef Matrix<double, 3, 3> mat3;
+}
