@@ -31,7 +31,7 @@ class Vector : public std::array<T, C> {
         }
 
         void print() const {
-            std::for_each(begin(), end(), [](auto& element) noexcept {
+            std::for_each(Vector::begin(), Vector::end(), [](auto& element) noexcept {
                 std::cout << element << " ";
             });
 
