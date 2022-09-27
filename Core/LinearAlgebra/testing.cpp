@@ -1,7 +1,7 @@
-#include <vector_in.hpp>
-#include <vector_in_typedef.hpp>
-#include <matrix_in.hpp>
-#include <matrix_in_typedef.hpp>
+#include <Vector/vector_in.hpp>
+#include <Vector/vector_in_typedef.hpp>
+#include <Matrix/matrix_in.hpp>
+#include <Matrix/matrix_in_typedef.hpp>
 
 int main() {
     app::vec3 vector{1, 2, 3};
