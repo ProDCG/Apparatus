@@ -2,10 +2,9 @@
 #include "matrix_in_typedef.hpp"
 
 int main() {
-    app::mat3 matOne = app::mat3(1.0f);
-    //app::mat3 matTwo = app::mat3(1.0f);
-    matOne.print();
-    matOne = matOne + 2;
-    matOne.print();
+    app::mat4 cam = app::mat4(1.0f);
+    cam.print();
+    cam = cam + 68;
+    cam.print();
     return 0;
 }
