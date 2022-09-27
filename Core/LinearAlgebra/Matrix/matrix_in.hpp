@@ -40,11 +40,10 @@ Matrix<T, C, R> operator + (Matrix<T, C, R> lhs, double scalar) {
 }
 
 template <typename T, size_t C, size_t R>
-Matrix<T, C, R> operator += (Matrix<T, C, R> lhs, double scalar) {
+Matrix<T, C, R> operator - (Matrix<T, C, R> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& row) noexcept {
         std::for_each(row.begin(), row.end(), [scalar](auto& element) noexcept {
-            std::cout << "here" << std::endl;
-            element += scalar;
+            element -= scalar;
         });
     });
     return lhs;
