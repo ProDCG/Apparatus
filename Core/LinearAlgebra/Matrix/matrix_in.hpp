@@ -10,15 +10,23 @@ class Matrix : public std::array<std::array<T, C>, R> {
     public:
         Matrix();
         Matrix(double num) {
-            // int i = 0;
-            // std::for_each([0].begin(), [0].end(), [&](auto& element) noexcept {
-            //     std::cout << i << ' ' << std::endl;
-            // });
+            std::for_each(Matrix::begin(), Matrix::end(), [&](auto& row) noexcept {
+                std::for_each(row.begin(), row.end(), [&](auto& element) noexcept {
+                    element = num;
+                });
+            });
         }
         Matrix(int num) {}
         Matrix(std::initializer_list<std::initializer_list<T>>) {}
 
-        void print() const {}
+        void print() const {
+            std::for_each(Matrix::begin(), Matrix::end(), [&](auto& row) noexcept {
+                std::for_each(row.begin(), row.end(), [&](auto& element) noexcept {
+                    std::cout << element << ' ';
+                });
+                std::cout << '\n';
+            });
+        }
 };
 
 template <typename T, size_t C, size_t R>
