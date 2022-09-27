@@ -23,5 +23,9 @@ class Matrix : public std::array<std::array<T, C>, R> {
 
 template <typename T, size_t C, size_t R>
 Matrix<T, C, R> operator + (Matrix<T, C, R> lhs, double scalar) {
-    
+    std::for_each(lhs.begin(), lhs.end() [](auto& row) noexcept {
+        std::for_each(row.begin(), row.end() [](auto& element) noexcept {
+            value += scalar;
+        });
+    });
 }
