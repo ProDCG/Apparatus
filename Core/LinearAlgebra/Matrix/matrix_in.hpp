@@ -20,3 +20,8 @@ class Matrix : public std::array<std::array<T, C>, R> {
 
         void print() const {}
 };
+
+template <typename T, size_t C, size_t R>
+Matrix<T, C, R> operator + (Matrix<T, C, R> lhs, double scalar) {
+    
+}
