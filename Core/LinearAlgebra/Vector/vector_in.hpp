@@ -7,6 +7,8 @@
 #include <algorithm>
 #include <typeinfo>
 
+#include "../Matrix/matrix_in.hpp"
+
 template <typename T, size_t C>
 class Vector : public std::array<T, C> {
     public:
@@ -149,6 +151,20 @@ Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
     }
 
     return lhs;
+}
+
+// -----------------------------
+// Operator Overloads, VECTOR, MATRIX, VECTOR
+// -----------------------------
+template <typename T, size_t C, size_t R>
+Vector<T, C> operator * (Matrix<T, C, R> lhs, Vector<T, C> rhs) {
+    Vector<T, C> vector;
+    std::for_each(lhs.begin(), lhs.end(), [&](auto& row) noexcept {
+        int i = 0;
+        std::for_each(row.begin(), row.end(), [&i](auto& element) noexcept {
+            element * 
+        });
+    });
 }
 
 // -----------------------------
