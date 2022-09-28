@@ -169,11 +169,10 @@ Vector<T, C> operator * (Matrix<T, C, R> lhs, Vector<T, C> rhs) {
     // });
     // return rhs;
     int i = 0;
-    std::for_each(lhs.begin(), lhs.end(), [&i](auto& row) noexcept {
-        
-        rhs[i]
+    std::for_each(lhs.begin(), lhs.end(), [&i, &rhs](auto& row) noexcept {
         std::for_each(row.begin(), row.end(), [&i](auto& element) noexcept {
-
+            std::cout << i << " "
+            std::cout << rhs[i] << std::endl;
         });
         ++i;
     });
