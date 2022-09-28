@@ -168,8 +168,9 @@ Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
     //     i++;
     // });
     // return rhs;
-    int i = 0;
+    int i = 0, j = 0, num = 0;
     std::for_each(lhs.begin(), lhs.end(), [&i, &rhs](auto& row) noexcept {
+        num = rhs[i];
         std::for_each(row.begin(), row.end(), [&i, &rhs](auto& element) noexcept {
             std::cout << i << " ";
             std::cout << rhs[i] << std::endl;
