@@ -169,7 +169,7 @@ Vector<T, C> operator * (Matrix<T, C, R> lhs, Vector<T, C> rhs) {
     // });
     // return rhs;
     int i = 0;
-    std::for_each(lhs.begin(), lhs.end(), [&](auto& row) noexcept {
+    std::for_each(lhs.begin(), lhs.end(), [&i](auto& row) noexcept {
         i = 0;
         std::for_each()
     })
