@@ -9,8 +9,8 @@
 
 #include "../Matrix/matrix_in.hpp"
 
-template <typename T, size_t C>
-class Vector : public std::array<T, C> {
+template <typename T, size_t R>
+class Vector : public std::array<T, R> {
     public:
         Vector();
         Vector(std::initializer_list<T> list) {
@@ -26,7 +26,7 @@ class Vector : public std::array<T, C> {
                 element = num;
             });
         }
-        Vector(std::array<T, C> arr) {
+        Vector(std::array<T, R> arr) {
             std::copy(arr.begin(), arr.end(), Vector::begin());
         }
 
@@ -42,8 +42,8 @@ class Vector : public std::array<T, C> {
 // -----------------------------
 // Operator Overloads, VECTOR, SCALAR, VOID
 // -----------------------------
-template <typename T, size_t C>
-Vector<T, C> operator + (Vector<T, C> lhs, double scalar) {
+template <typename T, size_t R>
+Vector<T, R> operator + (Vector<T, R> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element += scalar;
     });
@@ -51,8 +51,8 @@ Vector<T, C> operator + (Vector<T, C> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C>
-Vector<T, C> operator += (Vector<T, C> lhs, double scalar) {
+template <typename T, size_t R>
+Vector<T, R> operator += (Vector<T, R> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element += scalar;
     });
@@ -60,8 +60,8 @@ Vector<T, C> operator += (Vector<T, C> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C>
-Vector<T, C> operator - (Vector<T, C> lhs, double scalar) {
+template <typename T, size_t R>
+Vector<T, R> operator - (Vector<T, R> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element -= scalar;
     });
@@ -69,8 +69,8 @@ Vector<T, C> operator - (Vector<T, C> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C>
-Vector<T, C> operator -= (Vector<T, C> lhs, double scalar) {
+template <typename T, size_t R>
+Vector<T, R> operator -= (Vector<T, R> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element -= scalar;
     });
@@ -78,8 +78,8 @@ Vector<T, C> operator -= (Vector<T, C> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C>
-Vector<T, C> operator * (Vector<T, C> lhs, double scalar) {
+template <typename T, size_t R>
+Vector<T, R> operator * (Vector<T, R> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element *= scalar;
     });
@@ -87,8 +87,8 @@ Vector<T, C> operator * (Vector<T, C> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C>
-Vector<T, C> operator / (Vector<T, C> lhs, double scalar) {
+template <typename T, size_t R>
+Vector<T, R> operator / (Vector<T, R> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element /= scalar;
     });
@@ -99,8 +99,8 @@ Vector<T, C> operator / (Vector<T, C> lhs, double scalar) {
 // -----------------------------
 // Operator Overloads, VECTOR, VECTOR, VECTOR
 // -----------------------------
-template <typename T, size_t C>
-Vector<T, C> operator + (Vector<T, C> lhs, Vector<T, C> rhs) {
+template <typename T, size_t R>
+Vector<T, R> operator + (Vector<T, R> lhs, Vector<T, R> rhs) {
     for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
         lhs.at(i) += rhs.at(i);
     }
@@ -108,8 +108,8 @@ Vector<T, C> operator + (Vector<T, C> lhs, Vector<T, C> rhs) {
     return lhs;
 }
  
-template <typename T, size_t C> 
-Vector<T, C> operator += (Vector<T, C> lhs, Vector<T, C> rhs) {
+template <typename T, size_t R> 
+Vector<T, R> operator += (Vector<T, R> lhs, Vector<T, R> rhs) {
     for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
         lhs.at(i) += rhs.at(i);
     }
@@ -117,8 +117,8 @@ Vector<T, C> operator += (Vector<T, C> lhs, Vector<T, C> rhs) {
     return lhs;
 }
 
-template <typename T, size_t C>
-Vector<T, C> operator - (Vector<T, C> lhs, Vector<T, C> rhs) {
+template <typename T, size_t R>
+Vector<T, R> operator - (Vector<T, R> lhs, Vector<T, R> rhs) {
     for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
         lhs.at(i) -= rhs.at(i);
     } 
@@ -126,8 +126,8 @@ Vector<T, C> operator - (Vector<T, C> lhs, Vector<T, C> rhs) {
     return lhs;
 }
  
-template <typename T, size_t C>
-Vector<T, C> operator -= (Vector<T, C> lhs, Vector<T, C> rhs) {
+template <typename T, size_t R>
+Vector<T, R> operator -= (Vector<T, R> lhs, Vector<T, R> rhs) {
     for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
         lhs.at(i) -= rhs.at(i);
     } 
@@ -135,8 +135,8 @@ Vector<T, C> operator -= (Vector<T, C> lhs, Vector<T, C> rhs) {
     return lhs;
 }
  
-template <typename T, size_t C>
-Vector<T, C> operator * (Vector<T, C> lhs, Vector<T, C> rhs) {
+template <typename T, size_t R>
+Vector<T, R> operator * (Vector<T, R> lhs, Vector<T, R> rhs) {
     for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
         lhs.at(i) *= rhs.at(i);
     }
@@ -144,8 +144,8 @@ Vector<T, C> operator * (Vector<T, C> lhs, Vector<T, C> rhs) {
     return lhs;
 }
 
-template <typename T, size_t C>
-Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
+template <typename T, size_t R>
+Vector<T, R> operator / (Vector<T, R> lhs, Vector<T, R> rhs) {
     for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
         lhs.at(i) /= rhs.at(i);
     }
@@ -157,7 +157,7 @@ Vector<T, C> operator / (Vector<T, C> lhs, Vector<T, C> rhs) {
 // Operator Overloads, VECTOR, MATRIX, VECTOR
 // -----------------------------
 template <typename T, size_t C, size_t R>
-Vector<T, C> operator * (Matrix<T, C, R> lhs, Vector<T, C> rhs) {
+Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
     // int i = 0;
     // std::for_each(lhs.begin(), lhs.end(), [&i](auto& row) noexcept {
     //     int sum = 0;
@@ -182,8 +182,8 @@ Vector<T, C> operator * (Matrix<T, C, R> lhs, Vector<T, C> rhs) {
 // -----------------------------
 // Misc Functions
 // -----------------------------
-template <typename T, size_t C>
-Vector<T, C> powerFunc(Vector<T, C> lhs, double scalar) {
+template <typename T, size_t R>
+Vector<T, R> powerFunc(Vector<T, R> lhs, double scalar) {
     standardType(lhs);
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& element) noexcept {
         element = std::pow(element, scalar);
@@ -192,8 +192,8 @@ Vector<T, C> powerFunc(Vector<T, C> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C>
-T magnitude(Vector<T, C> lhs) {
+template <typename T, size_t R>
+T magnitude(Vector<T, R> lhs) {
     T sum = {};
     if constexpr ((std::is_same<T, double>()) || (std::is_same<T, int>())) {
         for (int i = 0; i < lhs.at(0) / lhs.size(); i++) {
@@ -205,8 +205,8 @@ T magnitude(Vector<T, C> lhs) {
     return sum;
 }
 
-template <typename T, size_t C>
-void standardType(Vector<T, C> lhs) {
+template <typename T, size_t R>
+void standardType(Vector<T, R> lhs) {
     if (!(typeid(double) == typeid(lhs.at(0)))) {
         std::cout << typeid(int).name() << " " << typeid(double).name() << " " << typeid(lhs.at(0)).name() << '\n';
         throw std::invalid_argument("Vector must be of type int/double");
