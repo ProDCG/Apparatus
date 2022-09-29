@@ -13,9 +13,8 @@ template <typename T, size_t R>
 class Vector : public std::array<T, R> {
     public:
         Vector() {
-            T t{};
             std::for_each(Vector::begin(), Vector::end(), [](auto& element) noexcept {
-                element = t;
+                element = T{};
             });
         }
         Vector(std::initializer_list<T> list) {
@@ -169,7 +168,7 @@ Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
     std::for_each(lhs.begin(), lhs.end(), [&i, &rhs, &j, &lhs](auto& row) noexcept {
         j = 0;
         std::for_each(row.begin(), row.end(), [&i, &rhs, &j, &lhs](auto& element) noexcept {
-            newVec[i] += lhs[i][j] * rhs[j];
+            newVec[i] += (lhs[i][j] * rhs[j]);
             ++j;
         });
         ++i;
