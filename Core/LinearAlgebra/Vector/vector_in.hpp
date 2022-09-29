@@ -158,6 +158,7 @@ Vector<T, R> operator / (Vector<T, R> lhs, Vector<T, R> rhs) {
 // -----------------------------
 template <typename T, size_t C, size_t R>
 Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
+    // https://xaktly.com/MatrixOperations.html
     int i = 0, j = 0, num = 0;
     std::for_each(lhs.begin(), lhs.end(), [&i, &rhs, &j](auto& row) noexcept {
         num = rhs[i];
