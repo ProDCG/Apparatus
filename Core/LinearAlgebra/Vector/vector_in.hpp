@@ -8,7 +8,6 @@
 #include <typeinfo>
 
 #include "../Matrix/matrix_in.hpp"
-#include "vector_in_typedef.hpp"
 
 template <typename T, size_t R>
 class Vector : public std::array<T, R> {
