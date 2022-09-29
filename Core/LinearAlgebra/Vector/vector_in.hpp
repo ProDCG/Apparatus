@@ -8,6 +8,7 @@
 #include <typeinfo>
 
 #include "../Matrix/matrix_in.hpp"
+#include "vector_in_typedef.hpp"
 
 template <typename T, size_t R>
 class Vector : public std::array<T, R> {
@@ -162,7 +163,7 @@ Vector<T, R> operator / (Vector<T, R> lhs, Vector<T, R> rhs) {
 // -----------------------------
 template <typename T, size_t C, size_t R>
 Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
-    Vector<T, R> newVec(1.0f);
+    app::vec3 newVec = app::vec3(0.0f);
     // https://xaktly.com/MatrixOperations.html
     int i = 0, j, num = 0;
     std::for_each(lhs.begin(), lhs.end(), [&i, &rhs, &j, &lhs, &newVec](auto& row) noexcept {
