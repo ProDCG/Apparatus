@@ -11,8 +11,6 @@ int main() {
         {1, 4, 2}};
     vector.print();
     matrix.print();
-    
-    app::vec3 newVector = matrix * vector;
 
     return 0;
 }
