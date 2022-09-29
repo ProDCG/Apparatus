@@ -169,9 +169,10 @@ Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
     // });
     // return rhs;
     int i = 0, j = 0, num = 0;
-    std::for_each(lhs.begin(), lhs.end(), [&i, &rhs](auto& row) noexcept {
+    std::for_each(lhs.begin(), lhs.end(), [&i, &rhs, &j](auto& row) noexcept {
         num = rhs[i];
-        std::for_each(row.begin(), row.end(), [&i, &rhs](auto& element) noexcept {
+        j = 0;
+        std::for_each(row.begin(), row.end(), [&i, &rhs, &j](auto& element) noexcept {
             std::cout << i << " ";
             std::cout << rhs[i] << std::endl;
         });
