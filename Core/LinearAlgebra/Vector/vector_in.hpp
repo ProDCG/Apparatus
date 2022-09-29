@@ -161,9 +161,9 @@ Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
     Vector<T, R> newVec();
     // https://xaktly.com/MatrixOperations.html
     int i = 0, j, num = 0;
-    std::for_each(lhs.begin(), lhs.end(), [&i, &rhs, &j](auto& row) noexcept {
+    std::for_each(lhs.begin(), lhs.end(), [&i, &rhs, &j, &lhs](auto& row) noexcept {
         j = 0;
-        std::for_each(row.begin(), row.end(), [&i, &rhs, &j](auto& element) noexcept {
+        std::for_each(row.begin(), row.end(), [&i, &rhs, &j, &lhs](auto& element) noexcept {
             newVec[i] += lhs[i][j] * rhs[j];
             ++j;
         });
