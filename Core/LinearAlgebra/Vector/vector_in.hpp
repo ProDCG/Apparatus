@@ -158,14 +158,14 @@ Vector<T, R> operator / (Vector<T, R> lhs, Vector<T, R> rhs) {
 // -----------------------------
 template <typename T, size_t C, size_t R>
 Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
+    Vector<T, R> newVec();
     // https://xaktly.com/MatrixOperations.html
-    int i = 0, j = 0, num = 0;
+    int i = 0, j, num = 0;
     std::for_each(lhs.begin(), lhs.end(), [&i, &rhs, &j](auto& row) noexcept {
-        num = rhs[i];
         j = 0;
         std::for_each(row.begin(), row.end(), [&i, &rhs, &j](auto& element) noexcept {
-            std::cout << i << " ";
-            std::cout << rhs[i] << std::endl;
+            newVec[i] += lhs[i][j] * rhs[j];
+            ++j;
         });
         ++i;
     });
