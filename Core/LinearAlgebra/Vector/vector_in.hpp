@@ -12,7 +12,12 @@
 template <typename T, size_t R>
 class Vector : public std::array<T, R> {
     public:
-        Vector();
+        Vector() {
+            T t{};
+            std::for_each(Vector::begin(), Vector::end(), [](auto& element) noexcept {
+                element = t;
+            });
+        }
         Vector(std::initializer_list<T> list) {
             std::copy(list.begin(), list.end(), Vector::begin());
         }
