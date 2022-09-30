@@ -177,6 +177,8 @@ Vector<T, R> operator / (Vector<T, R> lhs, Vector<T, R> rhs) {
 //     // return rhs;
 // }
 
+template <typename T, size_t C, size_t R>
+
 // -----------------------------
 // Misc Functions
 // -----------------------------
