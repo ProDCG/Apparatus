@@ -15,7 +15,7 @@ class Vector : public std::array<T, R> {
         Vector() {
             T t2 = {};
             std::for_each(Vector::begin(), Vector::end(), [&t2](auto& element) noexcept {
-                std::cout << t2;
+                element = t2;
             });
         }
         Vector(std::initializer_list<T> list) {
@@ -180,7 +180,7 @@ Vector<T, R> operator / (Vector<T, R> lhs, Vector<T, R> rhs) {
 
 template <typename T, size_t C, size_t R>
 Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
-    Vector<T, R> newVec();
+    Vector<T, R> newVec = Vector<T, C>();
     for (int i = 0; i < C; i++) {
         std::cout << "here" << std::endl;
         for (int j = 0; j < R; j++) {
@@ -189,7 +189,6 @@ Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
     }
     return rhs;
 }
-
 
 // -----------------------------
 // Misc Functions
