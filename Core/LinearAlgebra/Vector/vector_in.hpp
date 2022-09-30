@@ -170,7 +170,7 @@ Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
     for (int i = 0; i < C; i++) {
         std::cout << "here" << std::endl;
         for (int j = 0; j < R; j++) {
-            std::cout << "here2";
+            newVec[i] = lhs[i][j] * rhs[j];
         }
     }
     return rhs;
