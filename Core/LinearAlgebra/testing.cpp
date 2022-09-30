@@ -12,5 +12,7 @@ int main() {
     vector.print();
     matrix.print();
 
+    app::vec3 vector2 = matrix * vector;
+
     return 0;
 }
