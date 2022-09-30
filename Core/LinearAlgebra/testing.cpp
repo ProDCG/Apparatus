@@ -5,13 +5,14 @@
 
 int main() {
     app::vec3 vector{1, 2, 3};
-    Matrix<double, 2, 3> matrix{
+    Matrix<double, 3, 2> matrix{
         {1, -1, 2},
         {0, -3, 1}};
     vector.print();
     matrix.print();
 
-    app::vec3 vector2 = matrix * vector;
+    app::vec2 vector2 = matrix * vector;
+    vector2.print();
 
     return 0;
 }
