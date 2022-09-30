@@ -161,8 +161,6 @@ Vector<T, R> operator / (Vector<T, R> lhs, Vector<T, R> rhs) {
 // -----------------------------
 // Operator Overloads, VECTOR, MATRIX, VECTOR
 // -----------------------------
-
-
 // https://xaktly.com/MatrixOperations.html
 template <typename T, size_t C, size_t R>
 Vector<T, C> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
