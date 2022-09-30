@@ -5,10 +5,9 @@
 
 int main() {
     app::vec3 vector{1, 2, 3};
-    app::mat3 matrix{
-        {1, 1, 2},
-        {2, 1, 3},
-        {1, 4, 2}};
+    Matrix<double, 2, 3> matrix{
+        {1, -1, 2},
+        {0, -3, 1}};
     vector.print();
     matrix.print();
 

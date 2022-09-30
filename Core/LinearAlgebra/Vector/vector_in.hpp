@@ -173,7 +173,7 @@ Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
             newVec[i] = lhs[i][j] * rhs[j];
         }
     }
-    return rhs;
+    return newVec;
 }
 
 // -----------------------------
