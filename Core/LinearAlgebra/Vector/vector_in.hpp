@@ -166,7 +166,7 @@ Vector<T, R> operator / (Vector<T, R> lhs, Vector<T, R> rhs) {
 // https://xaktly.com/MatrixOperations.html
 template <typename T, size_t C, size_t R>
 Vector<T, R> operator * (Matrix<T, C, R> lhs, Vector<T, R> rhs) {
-    Vector<T, R> newVec = Vector<T, C>();
+    Vector<T, R> newVec = Vector<T, R>();
     for (int i = 0; i < C; i++) {
         std::cout << "here" << std::endl;
         for (int j = 0; j < R; j++) {
