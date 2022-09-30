@@ -7,8 +7,8 @@
 
 #include "../Vector/vector_in.hpp"
 
-template <typename T, size_t C, size_t R>
-class Matrix : public std::array<std::array<T, C>, R> {
+template <typename T, size_t R, size_t C>
+class Matrix : public std::array<std::array<T, R>, C> {
     public:
         Matrix();
         Matrix(double num) {
@@ -38,8 +38,8 @@ class Matrix : public std::array<std::array<T, C>, R> {
         }
 };
 
-template <typename T, size_t C, size_t R>
-Matrix<T, C, R> operator + (Matrix<T, C, R> lhs, double scalar) {
+template <typename T, size_t R, size_t C>
+Matrix<T, R, C> operator + (Matrix<T, R, C> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& row) noexcept {
         std::for_each(row.begin(), row.end(), [scalar](auto& element) noexcept {
             element += scalar;
@@ -48,8 +48,8 @@ Matrix<T, C, R> operator + (Matrix<T, C, R> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C, size_t R>
-Matrix<T, C, R> operator - (Matrix<T, C, R> lhs, double scalar) {
+template <typename T, size_t R, size_t C>
+Matrix<T, R, C> operator - (Matrix<T, R, C> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& row) noexcept {
         std::for_each(row.begin(), row.end(), [scalar](auto& element) noexcept {
             element -= scalar;
@@ -58,8 +58,8 @@ Matrix<T, C, R> operator - (Matrix<T, C, R> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C, size_t R>
-Matrix<T, C, R> operator * (Matrix<T, C, R> lhs, double scalar) {
+template <typename T, size_t R, size_t C>
+Matrix<T, R, C> operator * (Matrix<T, R, C> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& row) noexcept {
         std::for_each(row.begin(), row.end(), [scalar](auto& element) noexcept {
             element *= scalar;
@@ -68,8 +68,8 @@ Matrix<T, C, R> operator * (Matrix<T, C, R> lhs, double scalar) {
     return lhs;
 }
 
-template <typename T, size_t C, size_t R>
-Matrix<T, C, R> operator / (Matrix<T, C, R> lhs, double scalar) {
+template <typename T, size_t R, size_t C>
+Matrix<T, R, C> operator / (Matrix<T, R, C> lhs, double scalar) {
     std::for_each(lhs.begin(), lhs.end(), [scalar](auto& row) noexcept {
         std::for_each(row.begin(), row.end(), [scalar](auto& element) noexcept {
             element /= scalar;

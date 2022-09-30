@@ -5,10 +5,11 @@
 
 int main() {
     app::vec3 vector{1, 2, 3};
-    Matrix<double, 3, 2> matrix{
+    Matrix<double, 2, 3> matrix{
         {1, -1, 2},
         {0, -3, 1}};
     vector.print();
+    std::cout << '\n';
     matrix.print();
 
     app::vec2 vector2 = matrix * vector;
