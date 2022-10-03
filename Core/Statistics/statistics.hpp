@@ -6,6 +6,6 @@
 
 namespace app {
     double z_score(double std_dev, double observed, double average) {
-    return (observed - average) / std_dev;
-}
+        return (observed - average) / std_dev;
+    }
 }
