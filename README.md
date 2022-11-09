@@ -7,7 +7,7 @@ An example use case of declaring a vector using Apparatus:
 #include <vector_in.hpp>
 
 // Declare a vector of type double and length 3
-Vector<double, 3> vec{1, 2, 3};
+Vector<double, 3> vec{1, 2, 3}; 
 ```
 
 
