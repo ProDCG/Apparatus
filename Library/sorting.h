@@ -14,6 +14,13 @@ void sort(T& arr) {
     p(arr);
 }
 
+template<typename Policy, typename T>
+void sort(std::vector<T> vec) {
+    Policy p;
+
+    p(vec);
+}
+
 struct insertion_sort_policy_t {
     template <typename T>
     void operator()(T& arr) {
