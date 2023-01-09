@@ -9,4 +9,8 @@ int main() {
         {7, 8, 9}};
 
     mat.print();
+
+    // identity matrix
+    app::mat3 mat_2 = app::mat3(1.0f);
+    mat_2.print();
 }
