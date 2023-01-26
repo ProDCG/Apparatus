@@ -34,12 +34,42 @@ vec3 vec3::operator - () const {
     return vec3(-x, -y, -z);
 }
 
+
 vec3 vec3::operator * (float scalar) const {
     return vec3(x*scalar, y*scalar, z*scalar);
 }
 
+vec3 vec3::operator / (float scalar) const {
+    return vec3(x/scalar, y/scalar, z/scalar);
+}
 
+vec3 &vec3::operator = (const vec3 &rhs) {
+    x = rhs.x;
+    y = rhs.y;
+    z = rhs.z;
+    return *this;
+}
 
+vec3 &vec3::operator += (const vec3 &rhs) {
+    x += rhs.x;
+    y += rhs.y;
+    z += rhs.z;
+    return *this;
+}
+
+vec3 &vec3::operator -= (const vec3 &rhs) {
+    x -= rhs.x;
+    y -= rhs.y;
+    z -= rhs.z;
+    return *this;
+}
+
+vec3 &vec3::operator *= (float scalar) {
+    x *= scalar;
+    y *= scalar;
+    z *= scalar;
+    return *this;
+}
 
 bool vec3::isFinite() const {
     return std::isfinite(x) && std::isfinite(y) && std::isfinite(z);

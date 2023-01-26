@@ -23,11 +23,12 @@ namespace app {
 
             vec3 operator * (float scalar) const;
             vec3 operator / (float scalar) const;
-            vec3 operator + (float scalar) const;
 
-            vec3 operator = (const vec3 &rhs) const;
-            vec3 operator += (const vec3 &rhs) const;
-            vec3 operator -= (const vec3 &rhs) const;
+            vec3 &operator = (const vec3 &rhs);
+            vec3 &operator += (const vec3 &rhs);
+            vec3 &operator -= (const vec3 &rhs);
+            vec3 &operator *= (float scalar);
+            vec3 &operator /= (float scalar);
 
             // Other methods
             void set(const vec3 &other);
