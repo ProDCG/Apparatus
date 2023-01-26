@@ -21,6 +21,10 @@ namespace app {
             vec3 operator - (const vec3 &rhs) const;
             vec3 operator - () const;
 
+            vec3 operator * (float scalar) const;
+            vec3 operator / (float scalar) const;
+            vec3 operator + (float scalar) const;
+
             vec3 operator = (const vec3 &rhs) const;
             vec3 operator += (const vec3 &rhs) const;
             vec3 operator -= (const vec3 &rhs) const;
