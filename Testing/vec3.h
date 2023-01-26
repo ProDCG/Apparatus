@@ -37,9 +37,22 @@ namespace app {
             bool isZero() const;
 
             float dot(const vec3 &other) const;
+            vec3 cross(const vec3 &other) const;
+            float length() const;
             float lengthSq() const;
 
-            float clampLength(float maxLength) const;
-            float clampLength(float minLength, float maxLength) const;
+            vec3 clampLength(float maxLength) const;
+            vec3 clampLength(float minLength, float maxLength) const;
+
+            float sum() const;
+            float product() const;
+            float average() const;
+            float min() const;
+            float max() const;
+
+            vec3 abs() const;
+            vec3 neg() const;
+            vec3 recip() const;
+
     }; 
 }

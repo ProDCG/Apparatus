@@ -2,6 +2,7 @@
 
 #include "vec3.h"
 #include <cmath>
+#include <algorithm>
 
 using namespace app;
 
@@ -89,6 +90,49 @@ float vec3::dot(const vec3 &other) const {
     return x * other.x + y * other.y + z * other.z;
 }
 
+float vec3::length() const {
+    return std::sqrt(lengthSq());
+}
+
 float vec3::lengthSq() const {
     return x*x + y*y + z*z;
+}
+
+vec3 vec3::clampLength(float maxLength) const {
+    float lenSq = lengthSq();
+    if (lenSq > maxLength*maxLength) {
+        return *this * (maxLength / std::sqrt(lenSq));
+    } else {
+        return *this;
+    }
+}
+
+vec3 vec3::clampLength(float minLength, float maxLength) const {
+    float lenSq = lengthSq();
+    if (lenSq > maxLength*maxLength)
+        return *this * (maxLength / std::sqrt(lenSq));
+    else if (lenSq < minLength*minLength)
+        return *this * (minLength / std::sqrt(lenSq));
+    else
+        return *this;
+}
+
+float vec3::sum() const {
+    return x + y + z;
+}
+
+float vec3::product() const {
+    return x * y * z;
+}
+
+float vec3::average() const {
+    return (x + y + z) / 3;
+}
+
+float vec3::min() const {
+    std::min(x, std::min(y, z));
+}
+
+float vec3::max() const {
+    std::max(x, std::max(y, z));
 }
