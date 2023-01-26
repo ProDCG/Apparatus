@@ -16,7 +16,6 @@ namespace app {
             explicit vec3(float scalar);
 
             // Operator Overloads
-
             vec3 operator + (const vec3 &rhs) const;
             vec3 operator - (const vec3 &rhs) const;
             vec3 operator - () const;

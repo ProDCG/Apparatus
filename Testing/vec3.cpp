@@ -1,3 +1,5 @@
+//import ping pong robot!!! 
+
 #include "vec3.h"
 #include <cmath>
 
@@ -13,12 +15,6 @@ vec3::vec3(const vec3 &rhs)
 
 vec3::vec3(float scalar)
 :x(scalar), y(scalar), z(scalar) {}
-
-void vec3::set(const vec3 &other) {
-    x = other.x;
-    y = other.y;
-    z = other.z;
-}
 
 // ------------------------------------------------
 // Operator Overloads
@@ -69,6 +65,12 @@ vec3 &vec3::operator *= (float scalar) {
     y *= scalar;
     z *= scalar;
     return *this;
+}
+
+void vec3::set(const vec3 &other) {
+    x = other.x;
+    y = other.y;
+    z = other.z;
 }
 
 bool vec3::isFinite() const {
