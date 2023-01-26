@@ -20,7 +20,7 @@ void vector3::set(const vector3 &other) {
 }
 
 bool vector3::isFinite() const {
-    std::isfinite(x) && std::isfinite(y) && std::isfinite(z);
+    return std::isfinite(x) && std::isfinite(y) && std::isfinite(z);
 }
 
 bool vector3::isPerpindicular(const vector3 &other) const {
