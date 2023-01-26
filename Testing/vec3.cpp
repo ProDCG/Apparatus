@@ -136,3 +136,15 @@ float vec3::min() const {
 float vec3::max() const {
     std::max(x, std::max(y, z));
 }
+
+vec3 vec3::abs() const {
+    return vec3(std::abs(x), std::abs(y), std::abs(z));
+}
+
+vec3 vec3::neg() const {
+    return vec3(-x, -y, -z);
+}
+
+vec3 vec3::recip() const {
+    return vec3(1/x, 1/y, 1/z);
+}
