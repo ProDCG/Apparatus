@@ -1,38 +1,39 @@
 #pragma once
 
 namespace app {
-    class vector_3 {
+    class vector3 {
         public:
             float x;
             float y;
             float z;
 
-            vector_3() {}
+            vector3() {}
 
-            vector_3(float x, float y, float z);
+            vector3(float x, float y, float z);
 
-            vector_3(const vector_3 &rhs);
+            vector3(const vector3 &rhs);
 
-            explicit vector_3(float scalar);
+            explicit vector3(float scalar);
 
             // Operator Overloads
 
-            vector_3 operator + (const vector_3 &rhs) const;
-            vector_3 operator - (const vector_3 &rhs) const;
-            vector_3 operator / (const vector_3 &rhs) const;
-            vector_3 operator * (const vector_3 &rhs) const;
+            vector3 operator + (const vector3 &rhs) const;
+            vector3 operator - (const vector3 &rhs) const;
+            vector3 operator / (const vector3 &rhs) const;
+            vector3 operator * (const vector3 &rhs) const;
 
-            vector_3 operator = (const vector_3 &rhs) const;
-            vector_3 operator += (const vector_3 &rhs) const;
-            vector_3 operator -= (const vector_3 &rhs) const;
-            vector_3 operator *= (const vector_3 &rhs) const;
-            vector_3 operator /= (const vector_3 &rhs) const;
+            vector3 operator = (const vector3 &rhs) const;
+            vector3 operator += (const vector3 &rhs) const;
+            vector3 operator -= (const vector3 &rhs) const;
+            vector3 operator *= (const vector3 &rhs) const;
+            vector3 operator /= (const vector3 &rhs) const;
 
             // Other methods
-            void setIdentity();
-            void set(const vector_3 &other);
+            void set(const vector3 &other);
 
             bool isFinite() const;
-            bool isPerpindicular(const vector_3 &other) const;
+            bool isPerpindicular(const vector3 &other) const;
+
+            float dot(const vector3 &other) const;
     }; 
 }
