@@ -1,5 +1,8 @@
 #pragma once
 
+#include <cmath>
+#include <algorithm>
+
 namespace app {
     class vec3 {
         public:
@@ -53,6 +56,5 @@ namespace app {
             vec3 abs() const;
             vec3 neg() const;
             vec3 recip() const;
-
     }; 
 }

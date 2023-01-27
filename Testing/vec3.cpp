@@ -1,12 +1,6 @@
-//import ping pong robot!!! 
-
 #include "vec3.h"
-#include <cmath>
-#include <algorithm>
 
 using namespace app;
-
-#define NULL null_init;
 
 vec3::vec3(float x2, float y2, float z2)
 :x(x2), y(y2), z(z2) {}
