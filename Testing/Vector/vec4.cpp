@@ -113,3 +113,35 @@ vec4 vec4::clampLength(float minLength, float maxLength) const {
     else
         return *this;
 }
+
+float vec4::sum() const {
+    return n0 + n1 + n2 + n3;
+}
+
+float vec4::product() const {
+    return n0 * n1 * n2;
+}
+
+float vec4::average() const {
+    return (n0 + n1 + n2 + n3) / 4;
+}
+
+float vec4::min() const {
+    return std::min(n0, std::min(n1, std::min(n2, n3)));
+}
+
+float vec4::max() const {
+    return std::max(n0, std::max(n1, std::max(n2, n3)));
+}
+
+vec4 vec4::abs() const {
+    return vec4(std::abs(n0), std::abs(n1), std::abs(n2), std::abs(n3));
+}
+
+vec4 vec4::neg() const {
+    return vec4(-n0, -n1, -n2, -n3);
+}
+
+vec4 vec4::recip() const {
+    return vec4(1/n0, 1/n1, 1/n2, 1/n3);
+}

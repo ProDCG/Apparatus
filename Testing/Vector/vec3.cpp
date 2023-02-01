@@ -2,8 +2,8 @@
 
 using namespace app;
 
-vec3::vec3(float x2, float y2, float z2)
-:x(x2), y(y2), z(z2) {}
+vec3::vec3(float n0, float n1, float n2)
+:x(n0), y(n1), z(n2) {}
 
 vec3::vec3(const vec3 &rhs)
 :x(rhs.x), y(rhs.y), z(rhs.z) {}
@@ -124,11 +124,11 @@ float vec3::average() const {
 }
 
 float vec3::min() const {
-    std::min(x, std::min(y, z));
+    return std::min(x, std::min(y, z));
 }
 
 float vec3::max() const {
-    std::max(x, std::max(y, z));
+    return std::max(x, std::max(y, z));
 }
 
 vec3 vec3::abs() const {
