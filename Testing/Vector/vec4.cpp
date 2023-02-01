@@ -105,5 +105,11 @@ vec4 vec4::clampLength(float maxLength) const {
 }
 
 vec4 vec4::clampLength(float minLength, float maxLength) const {
-    
+    float lenSq = lengthSq();
+    if (lenSq > maxLength * maxLength)
+        return *this * (maxLength / std::sqrt(lenSq));
+    else if (lenSq < minLength * minLength)
+        return *this * (minLength / std::sqrt(lenSq));
+    else
+        return *this;
 }
