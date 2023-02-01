@@ -7,17 +7,19 @@
 namespace app {
     class mat3 {
         public:
-            float x1, y1, z1,
-                  x2, y2, z2,
-                  x3, y3, z3;
+            float n00, n01, n02,
+                    n10, n11, n12,
+                    n20, n21, n22;
 
                 mat3() {}
-                mat3(float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3);
+                mat3(float n00, float n01, float n02, float n10, float n11, float n12, float n20, float n21, float n22);
                 mat3(const vec3 &v1, const vec3 &v2, const vec3 &v3);
 
                 // Operator Overloads
                 mat3 operator * (float scalar) const;
+                mat3 operator *= (float scalar);
                 mat3 operator / (float scalar) const;
+                mat3 operator /= (float scalar);
                 mat3 operator - () const;
 
                 // Other methods
