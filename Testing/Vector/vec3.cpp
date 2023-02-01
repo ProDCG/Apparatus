@@ -124,11 +124,11 @@ float vec3::average() const {
 }
 
 float vec3::min() const {
-    std::min(x, std::min(y, z));
+    return std::min(x, std::min(y, z));
 }
 
 float vec3::max() const {
-    std::max(x, std::max(y, z));
+    return std::max(x, std::max(y, z));
 }
 
 vec3 vec3::abs() const {
