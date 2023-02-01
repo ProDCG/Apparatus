@@ -2,8 +2,8 @@
 
 using namespace app;
 
-vec3::vec3(float x2, float y2, float z2)
-:x(x2), y(y2), z(z2) {}
+vec3::vec3(float n0, float n1, float n2)
+:x(n0), y(n1), z(n2) {}
 
 vec3::vec3(const vec3 &rhs)
 :x(rhs.x), y(rhs.y), z(rhs.z) {}
