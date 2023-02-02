@@ -6,7 +6,7 @@ mat3::mat3(float n00, float n01, float n02, float n10, float n11, float n12, flo
 :n00(n00), n01(n01), n02(n02), n10(n10), n11(n11), n12(n12), n20(n20), n21(n21), n22(n22) {}
 
 mat3::mat3(const vec3 &v1, const vec3 &v2, const vec3 &v3)
-:n00(v1.x), n01(v1.y), n02(v1.z), n10(v2.x), n11(v2.y), n12(v2.z), n20(v3.x), n21(v3.y), n22(v3.z) {}
+:n00(v1.n0), n01(v1.n1), n02(v1.n2), n10(v2.n0), n11(v2.n1), n12(v2.n2), n20(v3.n0), n21(v3.n1), n22(v3.n2) {}
 
 mat3 mat3::operator * (float scalar) const {
     mat3 cur = *this;
