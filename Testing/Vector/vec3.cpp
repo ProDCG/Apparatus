@@ -3,13 +3,13 @@
 using namespace app;
 
 vec3::vec3(float n0, float n1, float n2)
-:x(n0), y(n1), z(n2) {}
+:n0(n0), n1(n1), n2(n2) {}
 
 vec3::vec3(const vec3 &rhs)
-:x(rhs.x), y(rhs.y), z(rhs.z) {}
+:n0(rhs.n0), n1(rhs.n1), n2(rhs.n2) {}
 
 vec3::vec3(float scalar)
-:x(scalar), y(scalar), z(scalar) {}
+:n0(scalar), n1(scalar), n2(scalar) {}
 
 // ------------------------------------------------
 // Operator Overloads

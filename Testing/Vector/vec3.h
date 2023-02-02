@@ -6,13 +6,11 @@
 namespace app {
     class vec3 {
         public:
-            float x;
-            float y;
-            float z;
+            float n0, n1, n2;
 
             vec3() {}
 
-            vec3(float x, float y, float z);
+            vec3(float n0, float n1, float n2);
 
             vec3(const vec3 &rhs);
 
