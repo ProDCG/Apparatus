@@ -35,6 +35,7 @@ namespace app {
 
             // Other methods
             void set (const vec4 &other);
+            void print() const;
 
             bool isFinite() const;
             bool isPerpindicular (const vec4 &other) const;

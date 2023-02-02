@@ -27,5 +27,6 @@ namespace app {
 
             // Other methods
             void set (const mat4 &other);
+            void print () const;
     };
 }

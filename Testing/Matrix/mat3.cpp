@@ -63,3 +63,9 @@ void mat3::set(const mat3 &other) {
     n21 = other.n21;
     n22 = other.n22;
 }
+
+void mat3::print() const {
+    printf("⎡ %f %f %f ⎤\n",
+    "⎢ %f %f %f ⎥\n",
+    "⎣ %f %f %f ⎦\n");
+}

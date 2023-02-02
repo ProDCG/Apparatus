@@ -71,6 +71,10 @@ void vec4::set(const vec4 &other) {
     n3 = other.n3;
 }
 
+void vec4::print() const {
+    printf("<%f, %f, %f, %f>\n", n0, n1, n2, n3);
+}
+
 bool vec4::isFinite() const {
     return std::isfinite(n0) && std::isfinite(n1) && std::isfinite(n2) && std::isfinite(n3);
 }

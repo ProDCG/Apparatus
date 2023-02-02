@@ -1,8 +1,9 @@
 #pragma once
 
-#include "vec3.h"
+#include "../Vector/vec3.h"
 #include <cmath>
 #include <algorithm>
+#include <iostream>
 
 namespace app {
     class mat3 {
@@ -24,5 +25,6 @@ namespace app {
 
                 // Other methods
                 void set (const mat3 &other);
+                void print() const;
     };
 }

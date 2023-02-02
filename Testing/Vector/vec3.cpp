@@ -67,6 +67,10 @@ void vec3::set(const vec3 &other) {
     n2 = other.n2;
 }
 
+void vec3::print() const {
+    printf("⟨%f, %f, %f⟩\n", n0, n1, n2);
+}
+
 bool vec3::isFinite() const {
     return std::isfinite(n0) && std::isfinite(n1) && std::isfinite(n2);
 }

@@ -1,1 +1,2 @@
-g++ -IC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing C:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing/vector_test.cpp -LC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing -Werror -Wall -Wextra -pedantic
+g++ -IC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Matrix C:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Matrix/mat3_test.cpp -LC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Matrix -LC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Vector -Werror -Wall -Wextra -pedantic
+g++ -ITesting/Matrix -ITesting/Vector mat3_test.cpp test
