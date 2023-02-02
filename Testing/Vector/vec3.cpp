@@ -4,7 +4,6 @@ using namespace app;
 
 vec3::vec3(float n0, float n1, float n2)
 :n0(n0), n1(n1), n2(n2) {}
-
 vec3::vec3(const vec3 &rhs)
 :n0(rhs.n0), n1(rhs.n1), n2(rhs.n2) {}
 
@@ -14,62 +13,62 @@ vec3::vec3(float scalar)
 // ------------------------------------------------
 // Operator Overloads
 vec3 vec3::operator + (const vec3 &rhs) const {
-    return vec3(x + rhs.x, y + rhs.y, z + rhs.z);
+    return vec3(n0 + rhs.n0, n1 + rhs.n1, n2 + rhs.n2);
 }
 
 vec3 vec3::operator - (const vec3 &rhs) const {
-    return vec3(x - rhs.x, y - rhs.y, y - rhs.z);
+    return vec3(n0 - rhs.n0, n1 - rhs.n1, n2 - rhs.n2);
 }
 
 vec3 vec3::operator - () const {
-    return vec3(-x, -y, -z);
+    return vec3(-n0, -n1, -n2);
 }
 
 
 vec3 vec3::operator * (float scalar) const {
-    return vec3(x*scalar, y*scalar, z*scalar);
+    return vec3(n0*scalar, n1*scalar, n2*scalar);
 }
 
 vec3 vec3::operator / (float scalar) const {
-    return vec3(x/scalar, y/scalar, z/scalar);
+    return vec3(n0/scalar, n1/scalar, n2/scalar);
 }
 
 vec3 &vec3::operator = (const vec3 &rhs) {
-    x = rhs.x;
-    y = rhs.y;
-    z = rhs.z;
+    n0 = rhs.n0;
+    n1 = rhs.n1;
+    n2 = rhs.n2;
     return *this;
 }
 
 vec3 &vec3::operator += (const vec3 &rhs) {
-    x += rhs.x;
-    y += rhs.y;
-    z += rhs.z;
+    n0 += rhs.n0;
+    n1 += rhs.n1;
+    n2 += rhs.n2;
     return *this;
 }
 
 vec3 &vec3::operator -= (const vec3 &rhs) {
-    x -= rhs.x;
-    y -= rhs.y;
-    z -= rhs.z;
+    n0 -= rhs.n0;
+    n1 -= rhs.n1;
+    n2 -= rhs.n2;
     return *this;
 }
 
 vec3 &vec3::operator *= (float scalar) {
-    x *= scalar;
-    y *= scalar;
-    z *= scalar;
+    n0 *= scalar;
+    n1 *= scalar;
+    n2 *= scalar;
     return *this;
 }
 
 void vec3::set(const vec3 &other) {
-    x = other.x;
-    y = other.y;
-    z = other.z;
+    n0 = other.n0;
+    n1 = other.n1;
+    n2 = other.n2;
 }
 
 bool vec3::isFinite() const {
-    return std::isfinite(x) && std::isfinite(y) && std::isfinite(z);
+    return std::isfinite(n0) && std::isfinite(n1) && std::isfinite(n2);
 }
 
 bool vec3::isPerpindicular(const vec3 &other) const {
@@ -81,7 +80,7 @@ bool vec3::isZero() const {
 }
 
 float vec3::dot(const vec3 &other) const {
-    return x * other.x + y * other.y + z * other.z;
+    return n0 * other.n0 + n1 * other.n1 + n2 * other.n2;
 }
 
 float vec3::length() const {
@@ -89,7 +88,7 @@ float vec3::length() const {
 }
 
 float vec3::lengthSq() const {
-    return x*x + y*y + z*z;
+    return n0*n0 + n1*n1 + n2*n2;
 }
 
 vec3 vec3::clampLength(float maxLength) const {
@@ -112,33 +111,33 @@ vec3 vec3::clampLength(float minLength, float maxLength) const {
 }
 
 float vec3::sum() const {
-    return x + y + z;
+    return n0 + n1 + n2;
 }
 
 float vec3::product() const {
-    return x * y * z;
+    return n0 * n1 * n2;
 }
 
 float vec3::average() const {
-    return (x + y + z) / 3;
+    return (n0 + n1 + n2) / 3;
 }
 
 float vec3::min() const {
-    return std::min(x, std::min(y, z));
+    return std::min(n0, std::min(n1, n2));
 }
 
 float vec3::max() const {
-    return std::max(x, std::max(y, z));
+    return std::max(n0, std::max(n1, n2));
 }
 
 vec3 vec3::abs() const {
-    return vec3(std::abs(x), std::abs(y), std::abs(z));
+    return vec3(std::abs(n0), std::abs(n1), std::abs(n2));
 }
 
 vec3 vec3::neg() const {
-    return vec3(-x, -y, -z);
+    return vec3(-n0, -n1, -n2);
 }
 
 vec3 vec3::recip() const {
-    return vec3(1/x, 1/y, 1/z);
+    return vec3(1/n0, 1/n1, 1/n2);
 }
