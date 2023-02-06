@@ -68,7 +68,7 @@ void vec3::set(const vec3 &other) {
 }
 
 void vec3::print() const {
-    printf("⟨%f, %f, %f⟩\n", n0, n1, n2);
+    printf("%f, %f, %f\n", n0, n1, n2);
 }
 
 bool vec3::isFinite() const {

@@ -65,5 +65,5 @@ void mat3::set(const mat3 &other) {
 }
 
 void mat3::print() const {
-    printf("⎡ %f %f %f ⎤\n⎢ %f %f %f ⎥\n⎣ %f %f %f ⎦\n", n00, n01, n02, n10, n11, n12, n20, n21, n22);
+    printf("%f %f %f\n%f %f %f\n%f %f %f\n", n00, n01, n02, n10, n11, n12, n20, n21, n22);
 }

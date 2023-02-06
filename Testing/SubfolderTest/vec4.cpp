@@ -72,7 +72,7 @@ void vec4::set(const vec4 &other) {
 }
 
 void vec4::print() const {
-    printf("<%f, %f, %f, %f>\n", n0, n1, n2, n3);
+    printf("%f, %f, %f, %f\n", n0, n1, n2, n3);
 }
 
 bool vec4::isFinite() const {

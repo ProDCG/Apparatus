@@ -1,2 +1,9 @@
-g++ -IC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Matrix C:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Matrix/mat3_test.cpp -LC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Matrix -LC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Vector -Werror -Wall -Wextra -pedantic
-g++ -ITesting/Matrix -ITesting/Vector mat3_test.cpp test
+g++ -IC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing 
+C:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing/vector_test.cpp 
+-LC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Core/LinearAlgebra/Testing 
+-Werror -Wall -Wextra -pedantic
+g++ mat3_test.cpp -Werror -Wall -Wextra -Wpedantic
+g++ -IC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/SubfolderTest C:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/SubfolderTest/mat3_test.cpp -LC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/SubfolderTest -Werror -Wall -Wextra -pedantic
+
+g++ -g mat3_test.cpp mat3.cpp vec3.cpp -o main
+g++ -g *.cpp -o main
