@@ -7,3 +7,7 @@ g++ -IC:/Users/Mason/OneDrive/School/PersonalProjects/Apparatus/Testing/Subfolde
 
 g++ -g mat3_test.cpp mat3.cpp vec3.cpp -o main
 g++ -g *.cpp -o main
+
+
+
+g++ funny.cpp vec3.cpp -o test | .\test

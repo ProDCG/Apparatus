@@ -1,4 +1,5 @@
-#pragma once
+#ifndef VEC_3_H
+#define VEC_3_H
 
 #include <cmath>
 #include <algorithm>
@@ -8,13 +9,11 @@ namespace app {
     class vec3 {
         public:
             float n0, n1, n2;
+            const size_t dims = 3;
 
             vec3() {}
-
             vec3(float n0, float n1, float n2);
-
             vec3(const vec3 &rhs);
-
             vec3(float scalar);
 
             // Operator Overloads
@@ -41,7 +40,7 @@ namespace app {
 
             float dot(const vec3 &other) const;
             vec3 cross(const vec3 &other) const;
-            float length() const;
+            float magnitude() const;
             float lengthSq() const;
 
             vec3 clampLength(float maxLength) const;
@@ -52,9 +51,13 @@ namespace app {
             float average() const;
             float min() const;
             float max() const;
+            float magnitude() const;
 
             vec3 abs() const;
             vec3 neg() const;
             vec3 recip() const;
+            vec3 pow(int i) const;
     }; 
 }
+
+#endif VEC_3_H

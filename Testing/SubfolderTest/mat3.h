@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MAT_3_H
+#define MAT_3_H
 
 #include "vec3.h"
 #include <cmath>
@@ -29,3 +30,5 @@ namespace app {
                 void print() const;
     };
 }
+
+#endif

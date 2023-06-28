@@ -24,7 +24,6 @@ vec3 vec3::operator - () const {
     return vec3(-n0, -n1, -n2);
 }
 
-
 vec3 vec3::operator * (float scalar) const {
     return vec3(n0*scalar, n1*scalar, n2*scalar);
 }
@@ -87,7 +86,11 @@ float vec3::dot(const vec3 &other) const {
     return n0 * other.n0 + n1 * other.n1 + n2 * other.n2;
 }
 
-float vec3::length() const {
+vec3 vec3::cross(const vec3 &other) const {
+    
+}
+
+float vec3::magnitude() const {
     return std::sqrt(lengthSq());
 }
 
@@ -144,4 +147,8 @@ vec3 vec3::neg() const {
 
 vec3 vec3::recip() const {
     return vec3(1/n0, 1/n1, 1/n2);
+}
+
+vec3 vec3::pow(int i) const {
+    return vec3(std::pow(n0, i), std::pow(n1, i), std::pow(n2, i));
 }

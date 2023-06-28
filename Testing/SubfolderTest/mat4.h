@@ -25,6 +25,8 @@ namespace app {
             mat4 operator /= (float scalar);
             mat4 operator - () const;
 
+            mat4 operator [] (size_t i);
+
             // Other methods
             void set (const mat4 &other);
             void print () const;

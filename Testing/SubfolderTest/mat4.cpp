@@ -66,6 +66,7 @@ mat4 mat4::operator - () const {
     return cur;
 }
 
+
 void mat4::set(const mat4 &other) {
     n00 = other.n00;
     n01 = other.n01;
