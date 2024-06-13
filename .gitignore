@@ -1,6 +1,17 @@
-# Ignore Gradle project-specific cache directory
-.gradle
-.vscode
+*.o
+*.obj
 
-# Ignore Gradle build output directory
-build
+*.dll
+*.lib
+
+*.exe
+*.out
+
+CMakeFiles
+
+*./Testing
+
+/.vscode
+/.vs
+
+build*
