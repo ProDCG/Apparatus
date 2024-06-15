@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Node.hpp"
-#include "../linalg/vec2.hpp"
 
 #include <vector>
 #include <algorithm>
@@ -14,19 +13,19 @@ namespace app {
         static constexpr size_t gridWidth = _gridWidth;
         static constexpr size_t gridHeight = _gridHeight;
 
-        app::vec2<int> start = app::vec2<int>(0, 0);
-        app::vec2<int> end = app::vec2<int>(0, 0);
+        Node start = Node(0, 0, false);
+        Node end = Node(9, 9, false);
 
         Node grid[gridWidth][gridHeight];
 
     public:
-        Grid();
+        Grid(const Node& start, const Node& end);
 
         size_t getWidth() const;
         size_t getHeight() const;
 
-        app::vec2<int> getStartPos() const;
-        app::vec2<int> getEndPos() const;
+        Node getStartPos() const;
+        Node getEndPos() const;
 
         std::vector<Node> getNeighbors(const Node& node) const;
 

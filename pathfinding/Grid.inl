@@ -1,10 +1,13 @@
 namespace app {
 
     template <size_t gridWidth, size_t gridHeight>
-    Grid<gridWidth, gridHeight>::Grid() {
+    Grid<gridWidth, gridHeight>::Grid(const Node& start, const Node& end) {
         for (int i = 0; i < gridWidth; i++) {
             for (int j = 0; j < gridHeight; j++) {
-                grid[i][j] = Node(i, j, false);
+                Node node(i, j, false);
+                node.gCost = node.distance(start);
+                node.hCost = node.distance(end);
+                grid[i][j] = node;
             }
         }
     }
@@ -20,12 +23,12 @@ namespace app {
     }
 
     template <size_t gridWidth, size_t gridHeight>
-    app::vec2<int> Grid<gridWidth, gridHeight>::getStartPos() const {
+    Node Grid<gridWidth, gridHeight>::getStartPos() const {
         return start;
     }
 
     template <size_t gridWidth, size_t gridHeight>
-    app::vec2<int> Grid<gridWidth, gridHeight>::getEndPos() const {
+    Node Grid<gridWidth, gridHeight>::getEndPos() const {
         return end;
     }
 
@@ -56,6 +59,8 @@ namespace app {
         for (int i = 0; i < gridWidth; i++) {
             for (int j = 0; j < gridHeight; j++) {
                 if (grid[i][j].obstacle) std::cout << '#';
+                else if (grid[i][j].x == start.x && grid[i][j].y == start.y) std::cout << 'S';
+                else if (grid[i][j].x == end.x && grid[i][j].y == end.y) std::cout << 'E';
                 else std::cout << '.';
             }
             std::cout << '\n';
