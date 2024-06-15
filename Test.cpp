@@ -1,5 +1,5 @@
 #include <iostream>
-#include "vec3.hpp"
+#include "linalg/vec3.hpp"
 using namespace std;
 
 int main() {

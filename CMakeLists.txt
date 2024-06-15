@@ -6,8 +6,13 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable(
         Exec
         Test.cpp
-        vec3.hpp
-        vec3.inl
-        vec2.hpp
-        vec2.inl
+        linalg/vec3.hpp
+        linalg/vec3.inl
+        linalg/vec2.hpp
+        linalg/vec2.inl
+        pathfinding/Node.hpp
+        pathfinding/Node.inl
+        pathfinding/astar.hpp
+        pathfinding/Grid.hpp
+        pathfinding/Grid.inl
 )
