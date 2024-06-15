@@ -37,6 +37,11 @@ namespace app {
     }
 
     template <size_t gridWidth, size_t gridHeight>
+    void Grid<gridWidth, gridHeight>::addObstacle(int x, int y) {
+        grid[x][y].obstacle = true;
+    }
+
+    template <size_t gridWidth, size_t gridHeight>
     void Grid<gridWidth, gridHeight>::print() const {
         for (int i = 0; i < gridWidth; i++) {
             for (int j = 0; j < gridHeight; j++) {

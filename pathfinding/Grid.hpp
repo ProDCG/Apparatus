@@ -23,6 +23,7 @@ namespace app {
 
         std::vector<Node> getNeighbors(const Node& node) const;
 
+        void addObstacle(int x, int y);
         void print() const;
     };
 }
