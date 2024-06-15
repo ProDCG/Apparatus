@@ -20,6 +20,16 @@ namespace app {
     }
 
     template <size_t gridWidth, size_t gridHeight>
+    app::vec2<int> Grid<gridWidth, gridHeight>::getStartPos() const {
+        return start;
+    }
+
+    template <size_t gridWidth, size_t gridHeight>
+    app::vec2<int> Grid<gridWidth, gridHeight>::getEndPos() const {
+        return end;
+    }
+
+    template <size_t gridWidth, size_t gridHeight>
     std::vector<Node> Grid<gridWidth, gridHeight>::getNeighbors(const app::Node &node) const {
         std::vector<Node> neighbors;
 
@@ -42,7 +52,7 @@ namespace app {
     }
 
     template <size_t gridWidth, size_t gridHeight>
-    void Grid<gridWidth, gridHeight>::print() const {
+    void Grid<gridWidth, gridHeight>::print() {
         for (int i = 0; i < gridWidth; i++) {
             for (int j = 0; j < gridHeight; j++) {
                 if (grid[i][j].obstacle) std::cout << '#';

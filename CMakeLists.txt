@@ -12,9 +12,10 @@ add_executable(
         linalg/vec2.inl
         pathfinding/Node.hpp
         pathfinding/Node.inl
-        pathfinding/astar.hpp
+        pathfinding/A_Star.hpp
+        pathfinding/A_Star.inl
         pathfinding/Grid.hpp
         pathfinding/Grid.inl
         testing/pathfinding/PathCreationTest.cpp
-#        testing/linalg/VecTest.cpp
+        #        testing/linalg/VecTest.cpp
 )
