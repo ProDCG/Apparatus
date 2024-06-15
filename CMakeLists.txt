@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(
         Exec
-        Test.cpp
+#        testing/linalg/VecTest.cpp
         linalg/vec3.hpp
         linalg/vec3.inl
         linalg/vec2.hpp
@@ -15,4 +15,6 @@ add_executable(
         pathfinding/astar.hpp
         pathfinding/Grid.hpp
         pathfinding/Grid.inl
+        testing/pathfinding/PathCreationTest.cpp
+#        testing/linalg/VecTest.cpp
 )

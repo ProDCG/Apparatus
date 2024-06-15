@@ -1,5 +1,3 @@
-#include "vec2.hpp"
-
 #include <iostream>
 #include <cmath>
 
@@ -82,4 +80,10 @@ namespace app {
     }
 
     // TODO: finish projection and rejection, as well as print
+
+    // Extraneous
+    template <typename T>
+    void vec2<T>::print() const {
+        std::cout << '<' << x << ", " << y << ">\n";
+    }
 }

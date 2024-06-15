@@ -23,8 +23,8 @@ namespace app {
         vec2<T> operator/(T scalar) const;
 
         // Properties
-        T magnitude() const;
         vec2<T> unit() const;
+        T magnitude() const;
 
         // Other Vector Operations
         T dot(const vec2<T>& other) const;
@@ -38,3 +38,5 @@ namespace app {
 
     };
 }
+
+#include "vec2.inl"

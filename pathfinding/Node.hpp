@@ -13,3 +13,5 @@ namespace app {
         int fCost() const;
     };
 }
+
+#include "Node.inl"
