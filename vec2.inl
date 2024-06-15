@@ -70,4 +70,16 @@ namespace app {
     T vec2<T>::dot(const vec2<T>& other) const {
         return (x * other.x + y * other.y);
     }
+
+    template <typename T>
+    T vec2<T>::cross(const vec2<T>& other) const {
+        return x * other.y - y * other.x;
+    }
+
+    template <typename T>
+    T vec2<T>::angle(const vec2<T>& other) const {
+        return std::acos(dot(other) / (magnitude() * other.magnitude()));
+    }
+
+    // TODO: finish projection and rejection, as well as print
 }

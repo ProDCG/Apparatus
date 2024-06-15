@@ -28,7 +28,7 @@ namespace app {
 
         // Other Vector Operations
         T dot(const vec2<T>& other) const;
-        vec2<T> cross(const vec2<T>& other) const;
+        T cross(const vec2<T>& other) const;
         T angle(const vec2<T>& other) const;
         vec2<T> projection(const vec2<T>& other) const;
         vec2<T> rejection(const vec2<T>& other) const;
