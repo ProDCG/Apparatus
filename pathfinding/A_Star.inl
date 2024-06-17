@@ -31,33 +31,34 @@ namespace app {
                 // Path Backtracking
 
                 std::vector<Node> path;
-                Node* pathNode = &current;
-                while (pathNode != nullptr) {
-                    path.push_back(*pathNode);
-                    pathNode = pathNode->parent;
-                }
+                Node currentNode = endNode;
 
-                char asciiGrid[gridHeight][gridWidth];
-                for (size_t y = 0; y < gridHeight; y++) {
-                    for (size_t x = 0; x < gridWidth; x++) {
-                        if (grid.isObstacle(x, y)) asciiGrid[y][x] = '#';
-                        else asciiGrid[y][x] = '.';
-                    }
+                while (currentNode != start) {
+                    path.push_back(currentNode);
+                    currentNode = *(currentNode.parent);
                 }
-
-                for (const Node& node : path) {
-                    asciiGrid[node.y][node.x] = 'O';
-                }
-
-                asciiGrid[startNode.y][startNode.x] = 'S';
-                asciiGrid[endNode.y][endNode.x] = 'E';
-
-                for (size_t y = 0; y < gridHeight; y++) {
-                    for (size_t x = 0; x < gridWidth; x++) {
-                        std::cout << asciiGrid[y][x];
-                    }
-                    std::cout << '\n';
-                }
+//
+//                char asciiGrid[gridHeight][gridWidth];
+//                for (size_t y = 0; y < gridHeight; y++) {
+//                    for (size_t x = 0; x < gridWidth; x++) {
+//                        if (grid.isObstacle(x, y)) asciiGrid[y][x] = '#';
+//                        else asciiGrid[y][x] = '.';
+//                    }
+//                }
+//
+//                for (const Node& node : path) {
+//                    asciiGrid[node.y][node.x] = 'O';
+//                }
+//
+//                asciiGrid[startNode.y][startNode.x] = 'S';
+//                asciiGrid[endNode.y][endNode.x] = 'E';
+//
+//                for (size_t y = 0; y < gridHeight; y++) {
+//                    for (size_t x = 0; x < gridWidth; x++) {
+//                        std::cout << asciiGrid[y][x];
+//                    }
+//                    std::cout << '\n';
+//                }
 
                 return;
             }

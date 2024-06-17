@@ -11,6 +11,7 @@ namespace app {
         explicit Node();
 
         bool operator==(const Node& other) const;
+        bool operator!=(const Node& other) const;
 
         double distance(const Node& other) const;
         double fCost() const;

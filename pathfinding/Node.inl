@@ -10,6 +10,10 @@ namespace app {
         return (other.x == x && other.y == y);
     }
 
+     bool Node::operator!=(const Node& other) const {
+        return (other.x != x || other.y != y);
+    }
+
     double Node::distance(const Node& other) const {
         return std::sqrt(x * other.x + y * other.y);
     }

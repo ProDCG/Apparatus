@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Grid.hpp"
-#include "../linalg/vec2.hpp"
 
 namespace app {
     class A_Star {
