@@ -15,10 +15,52 @@ namespace app {
 
         while (!openSet.empty()) {
             Node current = openSet[0];
-            openSet.erase(openSet.begin());
+
+            for (int i = 1; i < openSet.size(); i++) {
+                if (openSet[i].fCost() < current.fCost() || openSet[i].fCost() == current.fCost()) {
+                    if (openSet[i].hCost < current.hCost) current = openSet[i];
+                }
+            }
+
+            auto it = std::find(openSet.begin(), openSet.end(), current);
+            if (it != openSet.end()) openSet.erase(it);
+
             closedSet.push_back(current);
 
-            if (current == startNode) return;
+            if (current == endNode) {
+                // Path Backtracking
+
+                std::vector<Node> path;
+                Node* pathNode = &current;
+                while (pathNode != nullptr) {
+                    path.push_back(*pathNode);
+                    pathNode = pathNode->parent;
+                }
+
+                char asciiGrid[gridHeight][gridWidth];
+                for (size_t y = 0; y < gridHeight; y++) {
+                    for (size_t x = 0; x < gridWidth; x++) {
+                        if (grid.isObstacle(x, y)) asciiGrid[y][x] = '#';
+                        else asciiGrid[y][x] = '.';
+                    }
+                }
+
+                for (const Node& node : path) {
+                    asciiGrid[node.y][node.x] = 'O';
+                }
+
+                asciiGrid[startNode.y][startNode.x] = 'S';
+                asciiGrid[endNode.y][endNode.x] = 'E';
+
+                for (size_t y = 0; y < gridHeight; y++) {
+                    for (size_t x = 0; x < gridWidth; x++) {
+                        std::cout << asciiGrid[y][x];
+                    }
+                    std::cout << '\n';
+                }
+
+                return;
+            }
 
             for (Node node : grid.getNeighbors(current)) {
                 if (node.obstacle || std::find(closedSet.begin(), closedSet.end(), node) != closedSet.end()) {

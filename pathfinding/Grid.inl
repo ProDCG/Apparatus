@@ -50,6 +50,11 @@ namespace app {
     }
 
     template <size_t gridWidth, size_t gridHeight>
+    bool Grid<gridWidth, gridHeight>::isObstacle(int x, int y) {
+        return grid[x][y].obstacle;
+    }
+
+    template <size_t gridWidth, size_t gridHeight>
     void Grid<gridWidth, gridHeight>::addObstacle(int x, int y) {
         grid[x][y].obstacle = true;
     }

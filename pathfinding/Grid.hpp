@@ -28,6 +28,7 @@ namespace app {
         Node getEndPos() const;
 
         std::vector<Node> getNeighbors(const Node& node) const;
+        bool isObstacle(int x, int y);
 
         void addObstacle(int x, int y);
         void print();
