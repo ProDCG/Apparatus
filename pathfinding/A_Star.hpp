@@ -8,7 +8,7 @@ namespace app {
     private:
     public:
         template <size_t gridWidth, size_t gridHeight>
-        void findPath(Grid<gridWidth, gridHeight>& grid, const app::vec2<int>& start, const app::vec2<int>& end);
+        void findPath(Grid<gridWidth, gridHeight>& grid, const Node& start, const Node& end);
     };
 }
 

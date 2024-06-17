@@ -4,9 +4,9 @@
 
 namespace app {
     template <size_t gridWidth, size_t gridHeight>
-    void A_Star::findPath(Grid<gridWidth, gridHeight>& grid, const app::vec2<int>& start, const app::vec2<int>& end) {
-        Node startNode(start.x, start.y, false);
-        Node endNode(end.x, end.y, false);
+    void A_Star::findPath(Grid<gridWidth, gridHeight>& grid, const Node& start, const Node& end) {
+        Node startNode = start;
+        Node endNode = end;
 
         std::vector<Node> openSet;
         std::vector<Node> closedSet;

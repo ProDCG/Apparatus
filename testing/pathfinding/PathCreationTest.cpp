@@ -18,6 +18,7 @@ int main() {
     }
 
     app::A_Star a_star;
+    // todo finish
     a_star.findPath(grid, start, end);
 
     grid.print();
