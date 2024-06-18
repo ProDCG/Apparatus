@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Node.hpp"
-
 namespace app {
     Node::Node(int _x, int _y, bool _obstacle) : x(_x), y(_y), obstacle(_obstacle), gCost(0), hCost(0), parent(nullptr) {}
 
