@@ -1,37 +1,22 @@
 #pragma once
 
 #include "Node.hpp"
-
 #include <vector>
-#include <algorithm>
 
 namespace app {
 
     template <size_t _gridWidth, size_t _gridHeight>
     class Grid {
-    private:
-        static constexpr size_t gridWidth = _gridWidth;
-        static constexpr size_t gridHeight = _gridHeight;
-
-        Node start = Node(0, 0, false);
-        Node end = Node(9, 9, false);
-
-        Node grid[gridWidth][gridHeight];
-
     public:
-        Grid(const Node& start, const Node& end);
+        static const size_t gridWidth = _gridWidth;
+        static const size_t gridHeight = _gridHeight;
+        Node nodes[gridWidth][gridHeight];
 
-        size_t getWidth() const;
-        size_t getHeight() const;
-
-        Node getStartPos() const;
-        Node getEndPos() const;
+        Grid();
 
         std::vector<Node> getNeighbors(const Node& node) const;
-        bool isObstacle(int x, int y);
 
-        void addObstacle(int x, int y);
-        void print();
+        void setWalkable(int x, int y, bool walkable);
     };
 }
 

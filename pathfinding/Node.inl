@@ -1,13 +1,17 @@
 #pragma once
 
 namespace app {
-    Node::Node(int _x, int _y, bool _obstacle) : x(_x), y(_y), obstacle(_obstacle), gCost(0), hCost(0), parent(nullptr) {}
+    Node::Node(int _x, int _y, bool _walkable) : x(_x), y(_y), walkable(_walkable), gCost(0), hCost(0), parent(nullptr) {}
 
     bool Node::operator==(const Node& other) const {
         return x == other.x && y == other.y;
     }
 
-    double Node::fCost() const {
+    bool Node::operator!=(const Node& other) const {
+        return x != other.x || y != other.y;
+    }
+
+    int Node::fCost() const {
         return gCost + hCost;
     }
 

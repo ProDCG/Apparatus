@@ -6,14 +6,15 @@
 namespace app {
     struct Node {
         int x, y;
-        bool obstacle;
-        double gCost, hCost;
+        bool walkable;
+        int gCost, hCost;
         app::Node* parent;
 
-        Node(int _x, int _y, bool _obstacle);
+        Node(int _x = 0, int _y = 0, bool _walkable = true);
 
         bool operator==(const Node& other) const;
-        double fCost() const;
+        bool operator!=(const Node& other) const;
+        int fCost() const;
         double distance(const Node& other) const;
     };
 }
