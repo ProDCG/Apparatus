@@ -1,7 +1,7 @@
 namespace app {
 
     template <size_t gridWidth, size_t gridHeight>
-    Grid<gridWidth, gridHeight>::Grid(const Node& start, const Node& end) {
+    app::Grid<gridWidth, gridHeight> Grid(const Node& start, const Node& end) {
         for (int i = 0; i < gridWidth; i++) {
             for (int j = 0; j < gridHeight; j++) {
                 Node node(i, j, false);
