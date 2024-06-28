@@ -38,5 +38,3 @@ namespace app {
 
     };
 }
-
-#include "vec2.inl"

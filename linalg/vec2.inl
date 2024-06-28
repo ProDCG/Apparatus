@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include "vec2.hpp"
 
 namespace app {
 

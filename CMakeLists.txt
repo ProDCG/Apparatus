@@ -16,6 +16,11 @@ add_executable(
         pathfinding/AStar.inl
         pathfinding/Grid.hpp
         pathfinding/Grid.inl
-        testing/pathfinding/PathCreationTest.cpp
+        pathfinding/Map.hpp
+        linalg/mat2.hpp
+        linalg/mat2.inl
+        linalg/mat3.hpp
+        linalg/mat3.inl
+        testing/linalg/VecTest.cpp
         #        testing/linalg/VecTest.cpp
 )
